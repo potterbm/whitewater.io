@@ -172,6 +172,21 @@ header .settings {
 
 
 
+.gear-icon {
+	
+}
+
+.gear .gear-wheel {
+	stroke: red;
+	stroke-width: 10;
+}
+
+.gear .gear-tooth {
+	fill: blue;
+}
+
+
+
 
 .droplet-icon {
 	
