@@ -181,11 +181,23 @@ header .settings {
 	border: 1px solid black;
 }
 
-.droplet .droplet-bottom {
+.droplet .droplet-path {
 	fill: red;
 	
-	stroke-width: 2px;
 	stroke: blue;
+	stroke-width: 2px;
+	stroke-linecap: round;
+	stroke-dasharray: 240;
+	
+	-webkit-transition: stroke-dashoffset 0.5s linear;
+	-moz-transition: stroke-dashoffset 0.5s linear;
+	-ms-transition: stroke-dashoffset 0.5s linear;
+	-o-transition: stroke-dashoffset 0.5s linear;
+	transition: stroke-dashoffset 0.5s linear;
+}
+
+.hidden .droplet .droplet-path {
+	stroke-dashoffset: 240;
 }
 
 

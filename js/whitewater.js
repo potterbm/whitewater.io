@@ -13,13 +13,11 @@ function getWaterData(site)
 
 
 $(document).ready(function(e) {
-	console.log($(".hamburger").length);
-	console.log($(".hamburger .hamburger-line").length);
 	
 	$(".hamburger-icon").click(function(e) {
-		console.log('click');
-		console.log(this);
 		$(this).toggleClass("cross-icon");
 	});
+	
+	$(".droplet-icon.hidden").removeClass("hidden");
 	
 });
