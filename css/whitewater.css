@@ -189,11 +189,11 @@ header .settings {
 	stroke-linecap: round;
 	stroke-dasharray: 240;
 	
-	-webkit-transition: stroke-dashoffset 0.5s linear;
-	-moz-transition: stroke-dashoffset 0.5s linear;
-	-ms-transition: stroke-dashoffset 0.5s linear;
-	-o-transition: stroke-dashoffset 0.5s linear;
-	transition: stroke-dashoffset 0.5s linear;
+	-webkit-transition: stroke-dashoffset 5s linear;
+	-moz-transition: stroke-dashoffset 5s linear;
+	-ms-transition: stroke-dashoffset 5s linear;
+	-o-transition: stroke-dashoffset 5s linear;
+	transition: stroke-dashoffset 5s linear;
 }
 
 .hidden .droplet .droplet-path {
