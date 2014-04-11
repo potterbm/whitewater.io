@@ -14,7 +14,7 @@ function getWaterData(site)
 
 
 
-$(document).load(function(e) {
+$(window).load(function(e) {
 	
 	$(".hamburger").click(function(e) {
 		e.preventDefault();
