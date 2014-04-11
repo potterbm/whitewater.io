@@ -147,7 +147,7 @@ header .settings {
 	transition: transform 0.4s ease-in-out;
 }
 
-.hamburger.cross .hamburger-top {
+.cross-icon .hamburger-top {
 	-webkit-transform: rotateZ(45deg);
 	-moz-transform: rotateZ(45deg);
 	-ms-transform: rotateZ(45deg);
@@ -155,11 +155,11 @@ header .settings {
 	transform: rotateZ(45deg);
 }
 
-.hamburger.cross .hamburger-middle {
+.cross-icon .hamburger-middle {
 	opacity: 0;
 }
 
-.hamburger.cross .hamburger-bottom {
+.cross-icon .hamburger-bottom {
 	-webkit-transform: rotateZ(-45deg);
 	-moz-transform: rotateZ(-45deg);
 	-ms-transform: rotateZ(-45deg);
