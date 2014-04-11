@@ -117,9 +117,19 @@ header .settings {
 }
 
 .hamburger-line {
-	fill: rgb(0, 0, 0);
+	stroke-width: 10%;
+	stroke: rgb(0, 0, 0);
+	stroke-linecap: round;
 	
-	round: 5;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.hamburger-rect {
+	fill: rgb(0, 0, 0);
 	
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
