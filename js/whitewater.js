@@ -10,3 +10,15 @@ function getWaterData(site)
 		url : "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=" + site
 	});
 }
+
+
+
+
+$(document).ready(function(e) {
+	
+	$("svg.hamburger").click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass("cross");
+	});
+	
+});
