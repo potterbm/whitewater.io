@@ -182,7 +182,7 @@ header .settings {
 }
 
 .droplet .droplet-path {
-	fill: red;
+	fill: none;
 	
 	stroke: blue;
 	stroke-width: 2px;
