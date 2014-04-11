@@ -185,7 +185,84 @@ header .settings {
 
 .gear .gear-tooth {
 	fill: blue;
+	
+	-webkit-transform-origin: 50% 350%;
+	-moz-transform-origin: 50% 350%;
+	-ms-transform-origin: 50% 350%;
+	-o-transform-origin: 50% 350%;
+	transform-origin: 50% 350%;
+	
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-moz-transition: -moz-transform 0.5s ease-in-out;
+	-ms-transition: -ms-transform 0.5s ease-in-out;
+	-o-transition: -o-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
 }
+
+.gear .gear-tooth:nth-child(n) {
+	-webkit-transform: rotateZ(0deg);
+	-moz-transform: rotateZ(0deg);
+	-ms-transform: rotateZ(0deg);
+	-o-transform: rotateZ(0deg);
+	transform: rotateZ(0deg);
+}
+
+.gear .gear-tooth:nth-child(n + 1) {
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+.gear .gear-tooth:nth-child(n + 2) {
+	-webkit-transform: rotateZ(90deg);
+	-moz-transform: rotateZ(90deg);
+	-ms-transform: rotateZ(90deg);
+	-o-transform: rotateZ(90deg);
+	transform: rotateZ(90deg);
+}
+
+.gear .gear-tooth:nth-child(n + 3) {
+	-webkit-transform: rotateZ(135deg);
+	-moz-transform: rotateZ(135deg);
+	-ms-transform: rotateZ(135deg);
+	-o-transform: rotateZ(135deg);
+	transform: rotateZ(135deg);
+}
+
+.gear .gear-tooth:nth-child(n + 4) {
+	-webkit-transform: rotateZ(180deg);
+	-moz-transform: rotateZ(180deg);
+	-ms-transform: rotateZ(180deg);
+	-o-transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
+}
+
+.gear .gear-tooth:nth-child(n + 5) {
+	-webkit-transform: rotateZ(225deg);
+	-moz-transform: rotateZ(225deg);
+	-ms-transform: rotateZ(225deg);
+	-o-transform: rotateZ(225deg);
+	transform: rotateZ(225deg);
+}
+
+.gear .gear-tooth:nth-child(n + 6) {
+	-webkit-transform: rotateZ(270deg);
+	-moz-transform: rotateZ(270deg);
+	-ms-transform: rotateZ(270deg);
+	-o-transform: rotateZ(270deg);
+	transform: rotateZ(270deg);
+}
+
+.gear .gear-tooth:nth-child(n + 7) {
+	-webkit-transform: rotateZ(315deg);
+	-moz-transform: rotateZ(315deg);
+	-ms-transform: rotateZ(315deg);
+	-o-transform: rotateZ(315deg);
+	transform: rotateZ(315deg);
+}
+
 
 
 
