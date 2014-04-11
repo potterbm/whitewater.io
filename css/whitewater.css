@@ -199,7 +199,7 @@ header .settings {
 	transition: transform 0.5s ease-in-out;
 }
 
-.gear .gear-tooth:nth-child(n) {
+.gear .gear-tooth:nth-of-type(n) {
 	-webkit-transform: rotateZ(0deg);
 	-moz-transform: rotateZ(0deg);
 	-ms-transform: rotateZ(0deg);
@@ -207,7 +207,7 @@ header .settings {
 	transform: rotateZ(0deg);
 }
 
-.gear .gear-tooth:nth-child(n + 1) {
+.gear .gear-tooth:nth-of-type(n + 1) {
 	-webkit-transform: rotateZ(45deg);
 	-moz-transform: rotateZ(45deg);
 	-ms-transform: rotateZ(45deg);
@@ -215,7 +215,7 @@ header .settings {
 	transform: rotateZ(45deg);
 }
 
-.gear .gear-tooth:nth-child(n + 2) {
+.gear .gear-tooth:nth-of-type(n + 2) {
 	-webkit-transform: rotateZ(90deg);
 	-moz-transform: rotateZ(90deg);
 	-ms-transform: rotateZ(90deg);
@@ -223,7 +223,7 @@ header .settings {
 	transform: rotateZ(90deg);
 }
 
-.gear .gear-tooth:nth-child(n + 3) {
+.gear .gear-tooth:nth-of-type(n + 3) {
 	-webkit-transform: rotateZ(135deg);
 	-moz-transform: rotateZ(135deg);
 	-ms-transform: rotateZ(135deg);
@@ -231,7 +231,7 @@ header .settings {
 	transform: rotateZ(135deg);
 }
 
-.gear .gear-tooth:nth-child(n + 4) {
+.gear .gear-tooth:nth-of-type(n + 4) {
 	-webkit-transform: rotateZ(180deg);
 	-moz-transform: rotateZ(180deg);
 	-ms-transform: rotateZ(180deg);
@@ -239,7 +239,7 @@ header .settings {
 	transform: rotateZ(180deg);
 }
 
-.gear .gear-tooth:nth-child(n + 5) {
+.gear .gear-tooth:nth-of-type(n + 5) {
 	-webkit-transform: rotateZ(225deg);
 	-moz-transform: rotateZ(225deg);
 	-ms-transform: rotateZ(225deg);
@@ -247,7 +247,7 @@ header .settings {
 	transform: rotateZ(225deg);
 }
 
-.gear .gear-tooth:nth-child(n + 6) {
+.gear .gear-tooth:nth-of-type(n + 6) {
 	-webkit-transform: rotateZ(270deg);
 	-moz-transform: rotateZ(270deg);
 	-ms-transform: rotateZ(270deg);
@@ -255,7 +255,7 @@ header .settings {
 	transform: rotateZ(270deg);
 }
 
-.gear .gear-tooth:nth-child(n + 7) {
+.gear .gear-tooth:nth-of-type(n + 7) {
 	-webkit-transform: rotateZ(315deg);
 	-moz-transform: rotateZ(315deg);
 	-ms-transform: rotateZ(315deg);
