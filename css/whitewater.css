@@ -113,9 +113,8 @@ header .settings {
 }
 
 
-.hamburger-icon line {
-	stroke-width: 10;
-	stroke: rgb(0, 0, 0);
+.hamburger-line {
+	fill: rgb(0, 0, 0);
 }
 
 
