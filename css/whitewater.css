@@ -186,11 +186,11 @@ header .settings {
 .gear .gear-tooth {
 	fill: blue;
 	
-	-webkit-transform-origin: 50% 350%;
-	-moz-transform-origin: 50% 350%;
-	-ms-transform-origin: 50% 350%;
-	-o-transform-origin: 50% 350%;
-	transform-origin: 50% 350%;
+	-webkit-transform-origin: 50% 500%;
+	-moz-transform-origin: 50% 500%;
+	-ms-transform-origin: 50% 500%;
+	-o-transform-origin: 50% 500%;
+	transform-origin: 50% 500%;
 	
 	-webkit-transition: -webkit-transform 0.5s ease-in-out;
 	-moz-transition: -moz-transform 0.5s ease-in-out;
