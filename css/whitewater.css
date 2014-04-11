@@ -116,25 +116,43 @@ header .settings {
 .hamburger-line {
 	fill: rgb(0, 0, 0);
 	
-	-webkit-transform-origin: left center;
-	-moz-transform-origin: left center;
-	-ms-transform-origin: left center;
-	-o-transform-origin: left center;
-	transform-origin: left center;
-	
-	-webkit-transition: -webkit-transform 0.4s linear, opacity 0.4s linear;
-	-moz-transition: -moz-transform 0.4s linear, opacity 0.4s linear;
-	-ms-transition: -ms-transform 0.4s linear, opacity 0.4s linear;
-	-o-transition: -o-transform 0.4s linear, opacity 0.4s linear;
-	transition: transform 0.4s linear, opacity 0.4s linear;
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-ms-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+}
+
+.hamburger-top {
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-moz-transition: -moz-transform 0.5s ease-in-out;
+	-ms-transition: -ms-transform 0.5s ease-in-out;
+	-o-transition: -o-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+}
+
+.hamburger-middle {
+	-webkit-transition: opacity 0.3s ease-in;
+	-moz-transition: opacity 0.3s ease-in;
+	-ms-transition: opacity 0.3s ease-in;
+	-o-transition: opacity 0.3s ease-in;
+	transition: opacity 0.3s ease-in;
+}
+
+.hamburger-bottom {
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-moz-transition: -moz-transform 0.5s ease-in-out;
+	-ms-transition: -ms-transform 0.5s ease-in-out;
+	-o-transition: -o-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
 }
 
 .hamburger.cross .hamburger-top {
-	-webkit-transform: rotateZ(-45deg);
-	-moz-transform: rotateZ(-45deg);
-	-ms-transform: rotateZ(-45deg);
-	-o-transform: rotateZ(-45deg);
-	transform: rotateZ(-45deg);
+	-webkit-transform: translateY(25%) rotateZ(225deg);
+	-moz-transform: translateY(25%) rotateZ(225deg);
+	-ms-transform: translateY(25%) rotateZ(225deg);
+	-o-transform: translateY(25%) rotateZ(225deg);
+	transform: translateY(25%) rotateZ(225deg);
 }
 
 .hamburger.cross .hamburger-middle {
@@ -142,11 +160,11 @@ header .settings {
 }
 
 .hamburger.cross .hamburger-bottom {
-	-webkit-transform: rotateZ(45deg);
-	-moz-transform: rotateZ(45deg);
-	-ms-transform: rotateZ(45deg);
-	-o-transform: rotateZ(45deg);
-	transform: rotateZ(45deg);
+	-webkit-transform: translateY(-25%) rotateZ(-225deg);
+	-moz-transform: translateY(-25%) rotateZ(-225deg);
+	-ms-transform: translateY(-25%) rotateZ(-225deg);
+	-o-transform: translateY(-25%) rotateZ(-225deg);
+	transform: translateY(-25%) rotateZ(-225deg);
 }
 
 

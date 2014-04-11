@@ -16,7 +16,7 @@ function getWaterData(site)
 
 $(document).ready(function(e) {
 	
-	$("svg.hamburger").click(function(e) {
+	$("svg").click(function(e) {
 		e.preventDefault();
 		$(this).toggleClass("cross");
 	});
