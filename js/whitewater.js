@@ -23,4 +23,5 @@ $(document).ready(function(e) {
 
 $(window).load(function(e) {
 	$(".droplet-icon.hidden").removeClass("hidden");
+	$(".gear-icon.hidden").removeClass("hidden");
 });
