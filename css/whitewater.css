@@ -173,7 +173,20 @@ header .settings {
 
 
 
+.droplet-icon {
+	
+}
 
+.droplet {
+	border: 1px solid black;
+}
+
+.droplet .droplet-bottom {
+	fill: red;
+	
+	stroke-width: 2px;
+	stroke: blue;
+}
 
 
 
