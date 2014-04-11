@@ -119,11 +119,11 @@ header .settings {
 .hamburger-line {
 	fill: rgb(0, 0, 0);
 	
-	-webkit-transform-origin: left center;
-	-moz-transform-origin: left center;
-	-ms-transform-origin: left center;
-	-o-transform-origin: left center;
-	transform-origin: left center;
+	-webkit-transform-origin: 2.5% 50%;
+	-moz-transform-origin: 2.5% 50%;
+	-ms-transform-origin: 2.5% 50%;
+	-o-transform-origin: 2.5% 50%;
+	transform-origin: 2.5% 50%;
 }
 
 .hamburger-top {
