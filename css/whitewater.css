@@ -113,6 +113,13 @@ header .settings {
 }
 
 
+.hamburger-icon line {
+	stroke-width: 10;
+	stroke: rgb(0, 0, 0);
+}
+
+
+
 .current-conditions {
 	display: block;
 	width: 100%;
