@@ -137,11 +137,11 @@ header .settings {
 	-o-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	
-	-webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.3 ease-in;
-	-moz-transition: -moz-transform 0.4s ease-in-out, opacity 0.3 ease-in;
-	-ms-transition: -ms-transform 0.4s ease-in-out, opacity 0.3 ease-in;
-	-o-transition: -o-transform 0.4s ease-in-out, opacity 0.3 ease-in;
-	transition: transform 0.4s ease-in-out, opacity 0.3 ease-in;
+	-webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.3s ease-in;
+	-moz-transition: -moz-transform 0.4s ease-in-out, opacity 0.3s ease-in;
+	-ms-transition: -ms-transform 0.4s ease-in-out, opacity 0.3s ease-in;
+	-o-transition: -o-transform 0.4s ease-in-out, opacity 0.3s ease-in;
+	transition: transform 0.4s ease-in-out, opacity 0.3s ease-in;
 }
 
 .cross-icon .hamburger-top {
