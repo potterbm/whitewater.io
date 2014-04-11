@@ -177,6 +177,8 @@ header .settings {
 }
 
 .gear .gear-wheel {
+	fill: none;
+	
 	stroke: red;
 	stroke-width: 10;
 }
