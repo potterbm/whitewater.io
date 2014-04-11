@@ -112,6 +112,9 @@ header .settings {
 	vertical-align: middle;
 }
 
+.hamburger {
+	border: 1px solid black;
+}
 
 .hamburger-line {
 	fill: rgb(0, 0, 0);
