@@ -157,11 +157,11 @@ header .settings {
 }
 
 .cross-icon .hamburger-top {
-	-webkit-transform: rotateZ(40deg);
-	-moz-transform: rotateZ(40deg);
-	-ms-transform: rotateZ(40deg);
-	-o-transform: rotateZ(40deg);
-	transform: rotateZ(40deg);
+	-webkit-transform: rotateZ(42deg);
+	-moz-transform: rotateZ(42deg);
+	-ms-transform: rotateZ(42deg);
+	-o-transform: rotateZ(42deg);
+	transform: rotateZ(42deg);
 }
 
 .cross-icon .hamburger-middle {
@@ -169,11 +169,11 @@ header .settings {
 }
 
 .cross-icon .hamburger-bottom {
-	-webkit-transform: rotateZ(-40deg);
-	-moz-transform: rotateZ(-40deg);
-	-ms-transform: rotateZ(-40deg);
-	-o-transform: rotateZ(-40deg);
-	transform: rotateZ(-40deg);
+	-webkit-transform: rotateZ(-42deg);
+	-moz-transform: rotateZ(-42deg);
+	-ms-transform: rotateZ(-42deg);
+	-o-transform: rotateZ(-42deg);
+	transform: rotateZ(-42deg);
 }
 
 
