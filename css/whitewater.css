@@ -116,11 +116,11 @@ header .settings {
 .hamburger-line {
 	fill: rgb(0, 0, 0);
 	
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: center center;
-	-ms-transform-origin: center center;
-	-o-transform-origin: center center;
-	transform-origin: center center;
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-ms-transform-origin: left center;
+	-o-transform-origin: left center;
+	transform-origin: left center;
 }
 
 .hamburger-top {
@@ -148,11 +148,11 @@ header .settings {
 }
 
 .hamburger.cross .hamburger-top {
-	-webkit-transform: translateY(25%) rotateZ(225deg);
-	-moz-transform: translateY(25%) rotateZ(225deg);
-	-ms-transform: translateY(25%) rotateZ(225deg);
-	-o-transform: translateY(25%) rotateZ(225deg);
-	transform: translateY(25%) rotateZ(225deg);
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
 }
 
 .hamburger.cross .hamburger-middle {
@@ -160,11 +160,11 @@ header .settings {
 }
 
 .hamburger.cross .hamburger-bottom {
-	-webkit-transform: translateY(-25%) rotateZ(-225deg);
-	-moz-transform: translateY(-25%) rotateZ(-225deg);
-	-ms-transform: translateY(-25%) rotateZ(-225deg);
-	-o-transform: translateY(-25%) rotateZ(-225deg);
-	transform: translateY(-25%) rotateZ(-225deg);
+	-webkit-transform: rotateZ(-45deg);
+	-moz-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-o-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
 }
 
 

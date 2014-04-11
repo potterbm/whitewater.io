@@ -12,13 +12,7 @@ function getWaterData(site)
 }
 
 
-
-
-$(window).load(function(e) {
-	
-	$(".hamburger").click(function(e) {
-		e.preventDefault();
-		$(this).toggleClass("cross");
-	});
-	
+$(document).ready(function(e) {
+	console.log($(".hamburger").length);
+	console.log($(".hamburger .hamburger-line").length);
 });
