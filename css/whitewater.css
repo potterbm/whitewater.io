@@ -167,11 +167,11 @@ header .settings {
 }
 
 .cross-icon .hamburger-top {
-	-webkit-transform: translateY(25%) rotateZ(45deg);
-	-moz-transform: translateY(25%) rotateZ(45deg);
-	-ms-transform: translateY(25%) rotateZ(45deg);
-	-o-transform: translateY(25%) rotateZ(45deg);
-	transform: translateY(25%) rotateZ(45deg);
+	-webkit-transform: translateY(250%) rotateZ(45deg);
+	-moz-transform: translateY(250%) rotateZ(45deg);
+	-ms-transform: translateY(250%) rotateZ(45deg);
+	-o-transform: translateY(250%) rotateZ(45deg);
+	transform: translateY(250%) rotateZ(45deg);
 }
 
 .cross-icon .hamburger-middle {
@@ -179,11 +179,11 @@ header .settings {
 }
 
 .cross-icon .hamburger-bottom {
-	-webkit-transform: translateY(-25%) rotateZ(-45deg);
-	-moz-transform: translateY(-25%) rotateZ(-45deg);
-	-ms-transform: translateY(-25%) rotateZ(-45deg);
-	-o-transform: translateY(-25%) rotateZ(-45deg);
-	transform: translateY(-25%) rotateZ(-45deg);
+	-webkit-transform: translateY(-250%) rotateZ(-45deg);
+	-moz-transform: translateY(-250%) rotateZ(-45deg);
+	-ms-transform: translateY(-250%) rotateZ(-45deg);
+	-o-transform: translateY(-250%) rotateZ(-45deg);
+	transform: translateY(-250%) rotateZ(-45deg);
 }
 
 
