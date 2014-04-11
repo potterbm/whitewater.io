@@ -18,6 +18,9 @@ $(document).ready(function(e) {
 		$(this).toggleClass("cross-icon");
 	});
 	
+});
+
+
+$(window).load(function(e) {
 	$(".droplet-icon.hidden").removeClass("hidden");
-	
 });
