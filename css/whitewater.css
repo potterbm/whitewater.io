@@ -180,7 +180,7 @@ header .settings {
 	fill: none;
 	
 	stroke: rgb(0, 0, 0);
-	stroke-width: 10;
+	stroke-width: 7.5%;
 	
 	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
 	-moz-transition: -moz-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
