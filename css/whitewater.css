@@ -212,11 +212,17 @@ header .settings {
 	-o-transform-origin: 50% 300%;
 	transform-origin: 50% 300%;
 	
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(.8, 0, .2, 1) 0.7s, opacity 0.01s linear 0.45s;
+	/*-webkit-transition: -webkit-transform 0.5s cubic-bezier(.8, 0, .2, 1) 0.7s, opacity 0.01s linear 0.45s;
 	-moz-transition: -moz-transform 0.5s cubic-bezier(.8, 0, .2, 1) 0.7s, opacity 0.01s linear 0.45s;
 	-ms-transition: -ms-transform 0.5s cubic-bezier(.8, 0, .2, 1) 0.7s, opacity 0.01s linear 0.45s;
 	-o-transition: -o-transform 0.5s cubic-bezier(.8, 0, .2, 1) 0.7s, opacity 0.01s linear 0.45s;
-	transition: transform 0.5s cubic-bezier(.8, 0, .2, 1) 0.7s, opacity 0.01s linear 0.45s;
+	transition: transform 0.5s cubic-bezier(.8, 0, .2, 1) 0.7s, opacity 0.01s linear 0.45s;*/
+	
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+	-moz-transition: -moz-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+	-ms-transition: -ms-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+	-o-transition: -o-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+	transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
 }
 
 .hidden .gear .gear-tooth {
