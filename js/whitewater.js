@@ -18,8 +18,8 @@ $(document).ready(function(e) {
 		$(this).toggleClass("cross-icon");
 	});
 	
-	$(".gear-icon, .droplet-icon").click(function(e) {
-		$(this).toggleClass("hidden");
+	$(".hamburger-icon, .gear-icon, .droplet-icon").click(function(e) {
+		$(".hamburger-icon, .gear-icon, .droplet-icon").toggleClass("hidden");
 	});
 	
 });

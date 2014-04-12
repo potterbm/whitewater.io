@@ -45,7 +45,11 @@ header .logo {
 }
 
 .hamburger {
-	
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
+	-moz-transition: -moz-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
+	-ms-transition: -ms-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
+	-o-transition: -o-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
+	transition: transform 0.4s cubic-bezier(1, 1.5, 0, 1);
 }
 
 .hamburger-line {
@@ -74,6 +78,38 @@ header .logo {
 	-ms-transition: -ms-transform 0.4s ease-in-out, opacity 0.3s ease-in;
 	-o-transition: -o-transform 0.4s ease-in-out, opacity 0.3s ease-in;
 	transition: transform 0.4s ease-in-out, opacity 0.3s ease-in;
+}
+
+.hidden .hamburger {
+	-webkit-transform: translateX(-150%);
+	-moz-transform: translateX(-150%);
+	-ms-transform: translateX(-150%);
+	-o-transform: translateX(-150%);
+	transform: translateX(-150%);
+}
+
+.hamburger-icon .hamburger-top {
+	-webkit-transform: translateY(250%) rotateZ(45deg);
+	-moz-transform: translateY(250%) rotateZ(45deg);
+	-ms-transform: translateY(250%) rotateZ(45deg);
+	-o-transform: translateY(250%) rotateZ(45deg);
+	transform: translateY(250%) rotateZ(45deg);
+}
+
+.hamburger-icon .hamburger-middle {
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+.hamburger-icon .hamburger-bottom {
+	-webkit-transform: translateY(-250%) rotateZ(-45deg);
+	-moz-transform: translateY(-250%) rotateZ(-45deg);
+	-ms-transform: translateY(-250%) rotateZ(-45deg);
+	-o-transform: translateY(-250%) rotateZ(-45deg);
+	transform: translateY(-250%) rotateZ(-45deg);
 }
 
 .cross-icon .hamburger-top {
