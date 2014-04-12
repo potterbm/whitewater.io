@@ -314,13 +314,21 @@ header .settings {
 .droplet .droplet-path {
 	fill: none;
 	
-	stroke: blue;
-	stroke-width: 2px;
+	stroke: rgb(0, 0, 0);
+	stroke-width: 5%;
+	stroke-dasharray: 230;
+	stroke-dashoffset: 0;
+	
+	-webkit-transition: stroke-dashoffset 0.5s ease-in;
+	-moz-transition: stroke-dashoffset 0.5s ease-in;
+	-ms-transition: stroke-dashoffset 0.5s ease-in;
+	-o-transition: stroke-dashoffset 0.5s ease-in;
+	transition: stroke-dashoffset 0.5s ease-in;
 }
 
-/*.hidden .droplet .droplet-path {
-	stroke-dashoffset: 240;
-}*/
+.hidden .droplet .droplet-path {
+	stroke-dashoffset: 230;
+}
 
 
 
