@@ -201,6 +201,12 @@ header .settings {
 	-ms-transform: scale(0);
 	-o-transform: scale(0);
 	transform: scale(0);
+	
+	-webkit-transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+	-ms-transition-delay: 0.5s;
+	-o-transition-delay: 0.5s;
+	transition-delay: 0.5s;
 }
 
 .gear .gear-tooth {
