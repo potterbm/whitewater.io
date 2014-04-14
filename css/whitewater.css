@@ -59,11 +59,23 @@ header .menu-icon object {
 /**
 * Loading View
 **/
+.loading-view .menu-icon {
+	display: none;
+}
+
+.loading-view .menu-icon.logo {
+	margin: 0 auto;
+	width: 30%;
+}
+
 
 
 /**
 * River Search View
 **/
+.river-search-view {
+	
+}
 
 
 /**
