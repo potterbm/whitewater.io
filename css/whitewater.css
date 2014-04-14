@@ -2,7 +2,7 @@ body {
 	background-color: #eeeeee;
 	color: #222222;
 	
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 	
 }
@@ -83,11 +83,13 @@ header .menu-icon object {
 }
 
 .river-information-view .flow {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 150px;
 	line-height: 1;
 	font-weight: 100;
 	text-align: center;
+	
+	position: relative;
 }
 
 .river-information-view .flow.cfs:after {
