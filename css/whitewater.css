@@ -21,11 +21,6 @@ header {
 	margin: 0;
 	padding: 0;
 	
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
@@ -100,13 +95,18 @@ header .menu-icon object {
 	
 	content: "f\b3/s";
 	
-	font-size: 1em;
+	font-size: .25em;
 	font-weight: 100;
 	text-transform: lowercase;
 	
 	display: inline-block;
 	margin: 0;
 	padding: 0;
+	vertical-align: top;
+	
+	position: absolute;
+	top: .5em;
+	left: 100%;
 }
 
 
