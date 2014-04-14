@@ -78,6 +78,8 @@ header .menu-icon object {
 **/
 
 .river-information-view .current-conditions {
+	text-align: center;
+	
 	display: block;
 	width: 100%;
 }
@@ -88,6 +90,8 @@ header .menu-icon object {
 	line-height: 1;
 	font-weight: 100;
 	text-align: center;
+	
+	display: inline-block;
 	
 	position: relative;
 }
@@ -103,6 +107,7 @@ header .menu-icon object {
 	
 	display: inline-block;
 	margin: 0;
+	margin-left: .25em;
 	padding: 0;
 	vertical-align: top;
 	
