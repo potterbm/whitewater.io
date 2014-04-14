@@ -25,6 +25,12 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
+	
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 header .menu-icon {
@@ -40,10 +46,77 @@ header .logo {
 	text-align: center;
 	
 	display: inline-block;
-	width: 60%;
+	width: 80%;
 	vertical-align: middle;
 }
 
+header .menu-icon object {
+	display: inline-block;
+}
+
+
+/**
+* Loading View
+**/
+
+
+/**
+* River Search View
+**/
+
+
+/**
+* River Information View
+**/
+
+.river-information-view .current-conditions {
+	display: block;
+	width: 100%;
+}
+
+.river-information-view .flow {
+	font-family: 'Lato', sans-serif;
+	font-size: 150px;
+	line-height: 1;
+	font-weight: 100;
+	text-align: center;
+}
+
+.river-information-view .flow.cfs:after {
+	color: #aaaaaa;
+	
+	content: "f\b3/s";
+	
+	font-size: 1em;
+	font-weight: 100;
+	text-transform: lowercase;
+	
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+
+/**
+* Saved Rivers View
+**/
+
+
+/**
+* Settings View
+**/
+
+
+/**
+* Desktop View
+**/
+
+/**
+* Browser View
+**/
+
+
+/** hamburger icon styles **/
 .hamburger {
 	-webkit-transition: -webkit-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
 	-moz-transition: -moz-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
@@ -111,7 +184,10 @@ header .logo {
 	-o-transform: translateY(-250%) rotateZ(-45deg);
 	transform: translateY(-250%) rotateZ(-45deg);
 }
+/** end of hamburger icon styles **/
 
+
+/** cross icon styles **/
 .cross-icon .hamburger-top {
 	-webkit-transform: translateY(250%) rotateZ(45deg);
 	-moz-transform: translateY(250%) rotateZ(45deg);
@@ -135,13 +211,10 @@ header .logo {
 	-o-transform: translateY(-250%) rotateZ(-45deg);
 	transform: translateY(-250%) rotateZ(-45deg);
 }
+/** end of cross icon styles **/
 
 
-
-.gear-icon {
-	
-}
-
+/** gear icon styles **/
 .gear .gear-wheel {
 	fill: none;
 	
@@ -264,19 +337,10 @@ header .logo {
 	-o-transform: rotateZ(315deg);
 	transform: rotateZ(315deg);
 }
+/** end of gear icon styles **/
 
 
-
-
-
-.droplet-icon {
-	
-}
-
-.droplet {
-	 
-}
-
+/** droplet icon styles **/
 .droplet .droplet-path {
 	fill: none;
 	
@@ -295,31 +359,4 @@ header .logo {
 .hidden .droplet .droplet-path {
 	stroke-dashoffset: 230;
 }
-
-
-
-
-.current-conditions {
-	display: block;
-	width: 100%;
-}
-
-.flow {
-	font-family: 'Lato', sans-serif;
-	font-size: 150px;
-	line-height: 1;
-	font-weight: 100;
-	text-align: center;
-}
-
-.flow .units {
-	color: #aaaaaa;
-	
-	font-size: 25px;
-	line-height: 1;
-	font-weight: 100;
-	text-transform: uppercase;
-	
-	display: block;
-	margin: 0;
-}
+/** end of droplet icon styles **/
