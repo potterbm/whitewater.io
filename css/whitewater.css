@@ -142,7 +142,7 @@ header .menu-icon object {
 
 .hamburger-line {
 	stroke-width: 10%;
-	stroke: rgb(0, 0, 0);
+	stroke: #222222;
 	stroke-linecap: round;
 	
 	-webkit-transform-origin: 50% 50%;
@@ -153,7 +153,7 @@ header .menu-icon object {
 }
 
 .hamburger-rect {
-	fill: rgb(0, 0, 0);
+	fill: #222222;
 	
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
@@ -233,7 +233,7 @@ header .menu-icon object {
 .gear .gear-wheel {
 	fill: none;
 	
-	stroke: rgb(0, 0, 0);
+	stroke: #222222;
 	stroke-width: 7.5%;
 	
 	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
@@ -258,7 +258,7 @@ header .menu-icon object {
 }
 
 .gear .gear-tooth {
-	fill: rgb(0, 0, 0);
+	fill: #222222;
 	
 	-webkit-transform-origin: 50% 300%;
 	-moz-transform-origin: 50% 300%;
@@ -359,7 +359,7 @@ header .menu-icon object {
 .droplet .droplet-path {
 	fill: none;
 	
-	stroke: rgb(0, 0, 0);
+	stroke: #222222;
 	stroke-width: 5%;
 	stroke-dasharray: 230;
 	stroke-dashoffset: 0;
