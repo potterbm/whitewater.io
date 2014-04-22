@@ -41,14 +41,13 @@ header .logo {
 	text-align: center;
 	
 	display: inline-block;
-	margin: 0 15%;
-	width: 30%;
+	margin: 0 20%;
 	vertical-align: middle;
 }
 
 header .menu-icon svg {
 	display: block;
-	margin: 0 auto;
+	padding: 25%;
 	width: 50%;
 	height: 50%;
 }
