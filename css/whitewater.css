@@ -188,30 +188,6 @@ header .menu-icon svg {
 	-o-transform: translateX(-150%);
 	transform: translateX(-150%);
 }
-
-.hamburger-icon .hamburger-top {
-	-webkit-transform: translateY(250%) rotateZ(45deg);
-	-moz-transform: translateY(250%) rotateZ(45deg);
-	-ms-transform: translateY(250%) rotateZ(45deg);
-	-o-transform: translateY(250%) rotateZ(45deg);
-	transform: translateY(250%) rotateZ(45deg);
-}
-
-.hamburger-icon .hamburger-middle {
-	-webkit-transform: rotateZ(45deg);
-	-moz-transform: rotateZ(45deg);
-	-ms-transform: rotateZ(45deg);
-	-o-transform: rotateZ(45deg);
-	transform: rotateZ(45deg);
-}
-
-.hamburger-icon .hamburger-bottom {
-	-webkit-transform: translateY(-250%) rotateZ(-45deg);
-	-moz-transform: translateY(-250%) rotateZ(-45deg);
-	-ms-transform: translateY(-250%) rotateZ(-45deg);
-	-o-transform: translateY(-250%) rotateZ(-45deg);
-	transform: translateY(-250%) rotateZ(-45deg);
-}
 /** end of hamburger icon styles **/
 
 
