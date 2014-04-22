@@ -1,6 +1,6 @@
 body {
 	background-color: #2980b9;
-	color: #222222;
+	color: #f0f0f0;
 	
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
@@ -63,6 +63,12 @@ header .menu-icon svg {
 .loading-view .menu-icon.logo {
 	margin: 0 auto;
 	width: 30%;
+	
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
 }
 
 
@@ -160,7 +166,7 @@ header .menu-icon svg {
 }
 
 .hamburger-rect {
-	fill: #222222;
+	fill: rgba(255, 255, 255, 0.8);
 	
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
@@ -240,7 +246,7 @@ header .menu-icon svg {
 .gear .gear-wheel {
 	fill: none;
 	
-	stroke: #222222;
+	stroke: rgba(255, 255, 255, 0.8);
 	stroke-width: 7.5%;
 	
 	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
@@ -265,7 +271,7 @@ header .menu-icon svg {
 }
 
 .gear .gear-tooth {
-	fill: #222222;
+	fill: rgba(255, 255, 255, 0.8);
 	
 	-webkit-transform-origin: 50% 300%;
 	-moz-transform-origin: 50% 300%;
@@ -366,7 +372,7 @@ header .menu-icon svg {
 .droplet .droplet-path {
 	fill: none;
 	
-	stroke: #222222;
+	stroke: rgba(255, 255, 255, 0.8);
 	stroke-width: 5%;
 	stroke-dasharray: 230;
 	stroke-dashoffset: 0;
