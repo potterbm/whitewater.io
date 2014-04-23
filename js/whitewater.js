@@ -1,6 +1,14 @@
 
 
+function initMobile()
+{
+	
+}
 
+function initDesktop()
+{
+	
+}
 
 
 function getWaterData(site)
