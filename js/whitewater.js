@@ -10,6 +10,16 @@ function initDesktop()
 	
 }
 
+function isMobile()
+{
+	return $("#mobile-view").is(":visible");
+}
+
+function isDesktop()
+{
+	return $("#desktop-view").is(":visible");
+}
+
 
 function getWaterData(site)
 {

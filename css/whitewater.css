@@ -7,6 +7,15 @@ body {
 	
 }
 
+#mobile-view,
+#desktop-view
+{
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 0;
+	width: 0;
+}
 
 
 header {
@@ -370,3 +379,23 @@ header .menu-icon svg {
 	stroke-dashoffset: 230;
 }
 /** end of droplet icon styles **/
+
+
+
+/** mobile-only styles **/
+@media only screen and (max-width : 768px) {
+	#mobile-view {
+		display: block;
+	}
+}
+/** end of mobile-only styles **/
+
+
+
+/** desktop-only styles **/
+@media only screen and (min-width : 768px) {
+	#desktop-view {
+		display: block;
+	}
+}
+/** end of desktop-only styles **/
