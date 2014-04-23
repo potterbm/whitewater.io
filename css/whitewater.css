@@ -94,8 +94,8 @@ header .menu-icon svg {
 
 .river-information-view .flow {
 	font-family: 'Roboto', sans-serif;
-	font-size: 150px;
-	line-height: 1;
+	font-size: 25em;
+	line-height: 2;
 	font-weight: 100;
 	text-align: center;
 	
@@ -120,7 +120,7 @@ header .menu-icon svg {
 	vertical-align: top;
 	
 	position: absolute;
-	top: .5em;
+	top: 2em;
 	left: 100%;
 }
 
