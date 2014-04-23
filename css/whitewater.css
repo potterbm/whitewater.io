@@ -114,7 +114,7 @@ header .menu-icon svg {
 }
 
 .river-information-view .unit-cfs:after {
-	color: #aaaaaa;
+	color: rgba(255, 255, 255, 0.5);
 	
 	content: "f\b3/s";
 	
