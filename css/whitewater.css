@@ -1,6 +1,7 @@
 body {
 	background-color: #2980b9;
 	color: #f0f0f0;
+	color: rgba(255, 255, 255, 0.8);
 	
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
@@ -388,6 +389,11 @@ header .menu-icon svg {
 
 /** mobile-only styles **/
 @media only screen and (max-width : 768px) {
+	
+	body {
+		padding-top: 13em;
+	}
+	
 	#mobile-view {
 		display: block;
 	}
@@ -398,6 +404,11 @@ header .menu-icon svg {
 
 /** desktop-only styles **/
 @media only screen and (min-width : 768px) {
+	
+	body {
+		padding-top: 320px;
+	}
+	
 	#desktop-view {
 		display: block;
 	}
