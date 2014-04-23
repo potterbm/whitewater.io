@@ -169,7 +169,7 @@ header .menu-icon svg {
 
 .hamburger-line {
 	stroke-width: 10%;
-	stroke: #222222;
+	stroke: #2980b9;
 	stroke-linecap: round;
 	
 	-webkit-transform-origin: 50% 50%;
@@ -181,6 +181,7 @@ header .menu-icon svg {
 
 .hamburger-rect {
 	fill: rgba(255, 255, 255, 0.8);
+	fill: #2980b9;
 	
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
@@ -237,6 +238,7 @@ header .menu-icon svg {
 	fill: none;
 	
 	stroke: rgba(255, 255, 255, 0.8);
+	stroke: #2980b9;
 	stroke-width: 7.5%;
 	
 	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
@@ -268,6 +270,7 @@ header .menu-icon svg {
 
 .gear .gear-tooth {
 	fill: rgba(255, 255, 255, 0.8);
+	fill: #2980b9;
 	
 	-webkit-transform-origin: 50% 300%;
 	-moz-transform-origin: 50% 300%;
@@ -369,6 +372,7 @@ header .menu-icon svg {
 	fill: none;
 	
 	stroke: rgba(255, 255, 255, 0.8);
+	stroke: #2980b9;
 	stroke-width: 5%;
 	stroke-dasharray: 230;
 	stroke-dashoffset: 0;
