@@ -96,11 +96,11 @@ header .menu-icon svg {
 	top: 0;
 	left: 25%;
 	
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
-	-moz-transition: -moz-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
-	-ms-transition: -ms-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
-	-o-transition: -o-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
-	transition: transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
+	-webkit-transition: -webkit-transform 0.5s linear 0s;
+	-moz-transition: -moz-transform 0.5s linear 0s;
+	-ms-transition: -ms-transform 0.5s linear 0s;
+	-o-transition: -o-transform 0.5s linear 0s;
+	transition: transform 0.5s linear 0s;
 	
 	-webkit-transform: translateY(-200%);
 	-moz-transform: translateY(-200%);
@@ -166,23 +166,7 @@ header .menu-icon svg {
 	transform: translateX(200%);
 }
 
-.search-view .search-pane {
-	-webkit-transform: translateX(0%);
-	-moz-transform: translateX(0%);
-	-ms-transform: translateX(0%);
-	-o-transform: translateX(0%);
-	transform: translateX(0%);
-}
-
-.search-view .saved-pane {
-	-webkit-transform: translateX(-100%);
-	-moz-transform: translateX(-100%);
-	-ms-transform: translateX(-100%);
-	-o-transform: translateX(-100%);
-	transform: translateX(-100%);
-}
-
-.search-view .conditions-pane {
+.search-view #content {
 	-webkit-transform: translateX(-200%);
 	-moz-transform: translateX(-200%);
 	-ms-transform: translateX(-200%);
@@ -195,8 +179,12 @@ header .menu-icon svg {
 * River Information View
 **/
 
-.conditions-pane {
-	display: none;
+.conditions-view #content {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	-o-transform: translateX(0%);
+	transform: translateX(0%);
 }
 
 .conditions-view .conditions-pane {
@@ -243,8 +231,12 @@ header .menu-icon svg {
 * Saved Rivers View
 **/
 
-.saved-pane {
-	
+.saved-view #content {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
 }
 
 
