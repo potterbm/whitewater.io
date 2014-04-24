@@ -303,12 +303,30 @@ header .menu-icon svg {
 	transition: transform 0.4s ease-in-out, opacity 0.3s ease-in;
 }
 
-.hidden .hamburger {
-	-webkit-transform: translateX(-150%);
-	-moz-transform: translateX(-150%);
-	-ms-transform: translateX(-150%);
-	-o-transform: translateX(-150%);
-	transform: translateX(-150%);
+.hidden .hamburger-rect {
+	-webkit-transition-delay: 0s, 0.2s;
+	-moz-transition-delay: 0s, 0.2s;
+	-ms-transition-delay: 0s, 0.2s;
+	-o-transition-delay: 0s, 0.2s;
+	transition-delay: 0s, 0.2s;
+	
+	opacity: 0;
+}
+
+.hidden .hamburger-top {
+	-webkit-transform: translateY(250%) rotateZ(180deg);
+	-moz-transform: translateY(250%) rotateZ(180deg);
+	-ms-transform: translateY(250%) rotateZ(180deg);
+	-o-transform: translateY(250%) rotateZ(180deg);
+	transform: translateY(250%) rotateZ(180deg);
+}
+
+.hidden .hamburger-bottom {
+	-webkit-transform: translateY(-250%) rotateZ(-180deg);
+	-moz-transform: translateY(-250%) rotateZ(-180deg);
+	-ms-transform: translateY(-250%) rotateZ(-180deg);
+	-o-transform: translateY(-250%) rotateZ(-180deg);
+	transform: translateY(-250%) rotateZ(-180deg);
 }
 /** end of hamburger icon styles **/
 
