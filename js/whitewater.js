@@ -23,16 +23,16 @@ function isDesktop()
 function displayPane(targetPane)
 {
 	var $body = $("body");
+	$body.removeClass("edit-mode");
 	
 	if($body.hasClass(targetPane + "-view")) {
 		return true;
 	}
 	else {
+		$body.attr("data-last-pane", $body.attr("data-current-pane"));
+		$body.attr("data-current-pane", targetPane);
 		$body.removeClass("conditions-view saved-view search-view").addClass(targetPane + "-view");
 	}
-	
-	$body.removeClass("edit-mode");
-	$body.attr("data-last-pane", targetPane);
 }
 
 function toggleRiverEditMode()
@@ -74,7 +74,7 @@ $(document).ready(function(e) {
 			displayPane("search");
 		}
 		else if($body.hasClass("saved-view")) {
-			toggleEditMode();
+			toggleRiverEditMode();
 		}
 	});
 	

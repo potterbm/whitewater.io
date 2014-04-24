@@ -439,6 +439,14 @@ header .menu-icon svg {
 	transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0.7s, opacity 0.01s linear 0.45s;
 }
 
+.edit-mode .gear .gear-tooth {
+	-webkit-animation: spin 2s infinite;
+	-moz-animation: spin 2s infinite;
+	-ms-animation: spin 2s infinite;
+	-o-animation: spin 2s infinite;
+	animation: spin 2s infinite;
+}
+
 .hidden .gear .gear-tooth,
 .conditions-view .gear .gear-tooth,
 .search-view .gear .gear-tooth
@@ -609,3 +617,57 @@ header .menu-icon svg {
 	}
 }
 /** end of desktop-only styles **/
+
+
+
+/** animation keyframes **/
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotateZ(0deg);
+	}
+	
+	100% {
+		-webkit-transform: rotateZ(360deg);
+	}
+}
+
+@-moz-keyframes spin {
+	0% {
+		-moz-transform: rotateZ(0deg);
+	}
+	
+	100% {
+		-moz-transform: rotateZ(360deg);
+	}
+}
+
+@-ms-keyframes spin {
+	0% {
+		-ms-transform: rotateZ(0deg);
+	}
+	
+	100% {
+		-ms-transform: rotateZ(360deg);
+	}
+}
+
+@-o-keyframes spin {
+	0% {
+		-o-transform: rotateZ(0deg);
+	}
+	
+	100% {
+		-o-transform: rotateZ(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+/** end of animation keyframes **/
