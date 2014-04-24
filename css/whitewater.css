@@ -570,6 +570,20 @@ header .menu-icon svg {
 	-ms-transition: stroke-dashoffset 0.5s ease-in;
 	-o-transition: stroke-dashoffset 0.5s ease-in;
 	transition: stroke-dashoffset 0.5s ease-in;
+	
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.conditions-view .droplet-path {
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
 }
 
 .hidden .droplet .droplet-path,
