@@ -439,7 +439,7 @@ header .menu-icon svg {
 	transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0.7s, opacity 0.01s linear 0.45s;
 }
 
-.edit-mode .gear .gear-tooth {
+.edit-mode .gear {
 	-webkit-animation: spin 2s infinite;
 	-moz-animation: spin 2s infinite;
 	-ms-animation: spin 2s infinite;
