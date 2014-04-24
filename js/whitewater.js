@@ -30,6 +30,14 @@ function displayPane(targetPane)
 	else {
 		$body.removeClass("conditions-view saved-view search-view").addClass(targetPane + "-view");
 	}
+	
+	$body.removeClass("edit-mode");
+	$body.attr("data-last-pane", targetPane);
+}
+
+function toggleRiverEditMode()
+{
+	$("body").toggleClass("edit-mode");
 }
 
 
@@ -45,7 +53,28 @@ function getWaterData(site)
 $(document).ready(function(e) {
 	
 	$(".hamburger-icon").click(function(e) {
-		$(this).toggleClass("hidden");
+		var $body = $("body");
+		
+		if($body.hasClass("conditions-view")) {
+			displayPane("saved");
+		}
+		else if($body.hasClass("saved-view")) {
+			displayPane($body.attr("data-last-pane"));
+		}
+		else if($body.hasClass("search-view")) {
+			displayPane($body.attr("data-last-pane"));
+		}
+	});
+	
+	$(".gear-icon").click(function(e) {
+		var $body = $("body");
+		
+		if($body.hasClass("conditions-view")) {
+			displayPane("search");
+		}
+		else if($body.hasClass("saved-view")) {
+			toggleEditMode();
+		}
 	});
 	
 });

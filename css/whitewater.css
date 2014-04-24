@@ -303,7 +303,9 @@ header .menu-icon svg {
 	transition: transform 0.4s ease-in-out, opacity 0.3s ease-in;
 }
 
-.hidden .hamburger-rect {
+.hidden .hamburger-rect,
+.search-view .hamburger-rect
+{
 	-webkit-transition-delay: 0s, 0.2s;
 	-moz-transition-delay: 0s, 0.2s;
 	-ms-transition-delay: 0s, 0.2s;
@@ -313,7 +315,9 @@ header .menu-icon svg {
 	opacity: 0;
 }
 
-.hidden .hamburger-top {
+.hidden .hamburger-top,
+.search-view .hamburger-top
+{
 	-webkit-transform: translateY(250%) rotateZ(180deg);
 	-moz-transform: translateY(250%) rotateZ(180deg);
 	-ms-transform: translateY(250%) rotateZ(180deg);
@@ -321,7 +325,9 @@ header .menu-icon svg {
 	transform: translateY(250%) rotateZ(180deg);
 }
 
-.hidden .hamburger-bottom {
+.hidden .hamburger-bottom,
+.search-view .hamburger-bottom
+{
 	-webkit-transform: translateY(-250%) rotateZ(-180deg);
 	-moz-transform: translateY(-250%) rotateZ(-180deg);
 	-ms-transform: translateY(-250%) rotateZ(-180deg);
@@ -379,7 +385,9 @@ header .menu-icon svg {
 	transform-origin: 50% 50%;
 }
 
-.hidden .gear .gear-wheel {
+.hidden .gear .gear-wheel,
+.search-view .gear .gear-wheel
+{
 	-webkit-transform: scale(0);
 	-moz-transform: scale(0);
 	-ms-transform: scale(0);
@@ -391,6 +399,14 @@ header .menu-icon svg {
 	-ms-transition: -ms-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4) 0.6s;
 	-o-transition: -o-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4) 0.6s;
 	transition: transform 0.5s cubic-bezier(0, 1.4, 1, 1.4) 0.6s;
+}
+
+.conditions-view .gear .gear-wheel {
+	-webkit-transform: translateY(-25%) translateX(-25%);
+	-moz-transform: translateY(-25%) translateX(-25%);
+	-ms-transform: translateY(-25%) translateX(-25%);
+	-o-transform: translateY(-25%) translateX(-25%);
+	transform: translateY(-25%) translateX(-25%);
 }
 
 .gear .gear-tooth {
@@ -410,7 +426,10 @@ header .menu-icon svg {
 	transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0.7s, opacity 0.01s linear 0.45s;
 }
 
-.hidden .gear .gear-tooth {
+.hidden .gear .gear-tooth,
+.conditions-view .gear .gear-tooth,
+.search-view .gear .gear-tooth
+{
 	opacity: 0;
 	
 	-webkit-transform: rotateZ(0deg);
@@ -488,6 +507,28 @@ header .menu-icon svg {
 	-ms-transform: rotateZ(315deg);
 	-o-transform: rotateZ(315deg);
 	transform: rotateZ(315deg);
+}
+
+.gear-line {
+	fill: none;
+	
+	stroke: rgba(255, 255, 255, 0.8);
+	stroke: #2980b9;
+	stroke-width: 7.5%;
+	stroke-dasharray: 0%;
+	
+	-webkit-transition: stroke-dashoffset 0.3s ease-in-out;
+	-moz-transition: stroke-dashoffset 0.3s ease-in-out;
+	-ms-transition: stroke-dashoffset 0.3s ease-in-out;
+	-o-transition: stroke-dashoffset 0.3s ease-in-out;
+	transition: stroke-dashoffset 0.3s ease-in-out;
+}
+
+.hidden .gear .gear-line,
+.saved-view .gear-line,
+.search-view .gear-line
+{
+	stroke-dashoffset: 100%;
 }
 /** end of gear icon styles **/
 
