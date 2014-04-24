@@ -77,6 +77,12 @@ header .menu-icon svg {
 	position: absolute;
 	top: 0;
 	left: 0;
+	
+	-webkit-transition: -webkit-transform 0.5s linear 0s;
+	-moz-transition: -moz-transform 0.5s linear 0s;
+	-ms-transition: -ms-transform 0.5s linear 0s;
+	-o-transition: -o-transform 0.5s linear 0s;
+	transition: transform 0.5s linear 0s;
 }
 
 .pane {
@@ -107,12 +113,6 @@ header .menu-icon svg {
 	position: fixed;
 	top: 0;
 	left: 25%;
-	
-	-webkit-transition: -webkit-transform 0.5s linear 0s;
-	-moz-transition: -moz-transform 0.5s linear 0s;
-	-ms-transition: -ms-transform 0.5s linear 0s;
-	-o-transition: -o-transform 0.5s linear 0s;
-	transition: transform 0.5s linear 0s;
 	
 	-webkit-transform: translateY(-200%);
 	-moz-transform: translateY(-200%);
