@@ -303,8 +303,8 @@ header .menu-icon svg {
 	transition: transform 0.4s ease-in-out, opacity 0.3s ease-in;
 }
 
-.hidden .hamburger-rect,
-.search-view .hamburger-rect
+.hidden .hamburger .hamburger-rect,
+.edit-mode .hamburger .hamburger-rect
 {
 	-webkit-transition-delay: 0s, 0.2s;
 	-moz-transition-delay: 0s, 0.2s;
@@ -315,8 +315,8 @@ header .menu-icon svg {
 	opacity: 0;
 }
 
-.hidden .hamburger-top,
-.search-view .hamburger-top
+.hidden .hamburger .hamburger-top,
+.edit-mode .hamburger .hamburger-top
 {
 	-webkit-transform: translateY(250%) rotateZ(180deg);
 	-moz-transform: translateY(250%) rotateZ(180deg);
@@ -325,8 +325,8 @@ header .menu-icon svg {
 	transform: translateY(250%) rotateZ(180deg);
 }
 
-.hidden .hamburger-bottom,
-.search-view .hamburger-bottom
+.hidden .hamburger .hamburger-bottom,
+.edit-mode .hamburger .hamburger-bottom
 {
 	-webkit-transform: translateY(-250%) rotateZ(-180deg);
 	-moz-transform: translateY(-250%) rotateZ(-180deg);
@@ -338,7 +338,10 @@ header .menu-icon svg {
 
 
 /** cross icon styles **/
-.cross-icon .hamburger-top {
+.cross-icon .hamburger-top,
+.saved-view .hamburger-top,
+.search-view .hamburger-top
+{
 	-webkit-transform: translateY(250%) rotateZ(45deg);
 	-moz-transform: translateY(250%) rotateZ(45deg);
 	-ms-transform: translateY(250%) rotateZ(45deg);
@@ -346,7 +349,10 @@ header .menu-icon svg {
 	transform: translateY(250%) rotateZ(45deg);
 }
 
-.cross-icon .hamburger-middle {
+.cross-icon .hamburger-middle,
+.saved-view .hamburger-middle,
+.search-view .hamburger-middle
+{
 	-webkit-transform: rotateZ(45deg);
 	-moz-transform: rotateZ(45deg);
 	-ms-transform: rotateZ(45deg);
@@ -354,7 +360,10 @@ header .menu-icon svg {
 	transform: rotateZ(45deg);
 }
 
-.cross-icon .hamburger-bottom {
+.cross-icon .hamburger-bottom,
+.saved-view .hamburger-bottom,
+.search-view .hamburger-bottom
+{
 	-webkit-transform: translateY(-250%) rotateZ(-45deg);
 	-moz-transform: translateY(-250%) rotateZ(-45deg);
 	-ms-transform: translateY(-250%) rotateZ(-45deg);
