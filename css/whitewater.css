@@ -385,6 +385,12 @@ header .menu-icon svg {
 	-o-transition: -o-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
 	transition: transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
 	
+	-webkit-transform: translateX(0%) translateY(0%);
+	-moz-transform: translateX(0%) translateY(0%);
+	-ms-transform: translateX(0%) translateY(0%);
+	-o-transform: translateX(0%) translateY(0%);
+	transform: translateX(0%) translateY(0%);
+	
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;
