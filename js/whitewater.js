@@ -53,6 +53,7 @@ function getWaterData(site)
 $(document).ready(function(e) {
 	
 	$(".hamburger-icon").click(function(e) {
+		alert("click");
 		var $body = $("body");
 		
 		if($body.hasClass("conditions-view")) {
