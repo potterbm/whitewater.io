@@ -402,11 +402,11 @@ header .menu-icon svg {
 }
 
 .conditions-view .gear .gear-wheel {
-	-webkit-transform: translateY(-25%) translateX(-25%);
-	-moz-transform: translateY(-25%) translateX(-25%);
-	-ms-transform: translateY(-25%) translateX(-25%);
-	-o-transform: translateY(-25%) translateX(-25%);
-	transform: translateY(-25%) translateX(-25%);
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	-moz-transform: translateY(-50%) translateX(-50%);
+	-ms-transform: translateY(-50%) translateX(-50%);
+	-o-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
 }
 
 .gear .gear-tooth {
@@ -515,7 +515,8 @@ header .menu-icon svg {
 	stroke: rgba(255, 255, 255, 0.8);
 	stroke: #2980b9;
 	stroke-width: 7.5%;
-	stroke-dasharray: 0%;
+	stroke-dasharray: 50;
+	stroke-linecap: round;
 	
 	-webkit-transition: stroke-dashoffset 0.3s ease-in-out;
 	-moz-transition: stroke-dashoffset 0.3s ease-in-out;
@@ -528,7 +529,7 @@ header .menu-icon svg {
 .saved-view .gear-line,
 .search-view .gear-line
 {
-	stroke-dashoffset: 100%;
+	stroke-dashoffset: 50;
 }
 /** end of gear icon styles **/
 
