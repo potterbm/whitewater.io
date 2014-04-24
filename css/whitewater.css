@@ -94,7 +94,7 @@ header .menu-icon svg {
 	
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 25%;
 	
 	-webkit-transition: -webkit-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
 	-moz-transition: -moz-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
