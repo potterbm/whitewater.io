@@ -151,13 +151,7 @@ header .menu-icon svg {
 **/
 
 .search-pane {
-	display: block;
-	margin: 0;
-	padding: 0;
-	
-	position: fixed;
-	left: ;
-	z-index: 5;
+	background-color: green;
 	
 	-webkit-transform: translateX(200%);
 	-moz-transform: translateX(200%);
@@ -189,9 +183,6 @@ header .menu-icon svg {
 
 .conditions-view .conditions-pane {
 	text-align: center;
-	
-	display: block;
-	width: 100%;
 }
 
 .conditions-view .flow {
@@ -237,6 +228,10 @@ header .menu-icon svg {
 	-ms-transform: translateX(-100%);
 	-o-transform: translateX(-100%);
 	transform: translateX(-100%);
+}
+
+.saved-pane {
+	background-color: purple;
 }
 
 
