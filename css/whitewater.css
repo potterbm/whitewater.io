@@ -34,6 +34,7 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 100;
 	
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -67,6 +68,64 @@ header .menu-icon svg {
 }
 
 
+.pane {
+	box-sizing: border-box;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.pane-title {
+	color: #2980b9;
+	
+	font-size: 5em;
+	font-weight: 500;
+	
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
+	-moz-transition: -moz-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
+	-ms-transition: -ms-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
+	-o-transition: -o-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
+	transition: transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0s;
+	
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.saved-view .saved-pane .pane-title,
+.search-view .search-pane .pane-title
+{
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0.5s;
+	-moz-transition: -moz-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0.5s;
+	-ms-transition: -ms-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0.5s;
+	-o-transition: -o-transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0.5s;
+	transition: transform 0.5s cubic-bezier(1, 1.6, 0, 1) 0.5s;
+	
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+
 /**
 * Loading View
 **/
@@ -90,8 +149,47 @@ header .menu-icon svg {
 /**
 * River Search View
 **/
-.river-search-view {
+
+.search-pane {
+	display: block;
+	margin: 0;
+	padding: 0;
+	height: 90%;
+	width: 90%;
 	
+	position: fixed;
+	left: ;
+	z-index: 5;
+	
+	-webkit-transform: translateX(200%);
+	-moz-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	-o-transform: translateX(200%);
+	transform: translateX(200%);
+}
+
+.search-view .search-pane {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	-o-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+.search-view .saved-pane {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.search-view .conditions-pane {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
 }
 
 
@@ -99,16 +197,20 @@ header .menu-icon svg {
 * River Information View
 **/
 
-.river-information-view .current-conditions {
+.conditions-pane {
+	display: none;
+}
+
+.conditions-view .conditions-pane {
 	text-align: center;
 	
 	display: block;
 	width: 100%;
 }
 
-.river-information-view .flow {
+.conditions-view .flow {
 	font-family: 'Roboto', sans-serif;
-	font-size: 25em;
+	font-size: 30em;
 	line-height: 2;
 	font-weight: 100;
 	text-align: center;
@@ -118,7 +220,7 @@ header .menu-icon svg {
 	position: relative;
 }
 
-.river-information-view .unit-cfs:after {
+.conditions-view .unit-cfs:after {
 	color: rgba(255, 255, 255, 0.5);
 	
 	content: "f\b3/s";
@@ -142,6 +244,11 @@ header .menu-icon svg {
 /**
 * Saved Rivers View
 **/
+
+.saved-pane {
+	
+}
+
 
 
 /**
@@ -384,7 +491,10 @@ header .menu-icon svg {
 	transition: stroke-dashoffset 0.5s ease-in;
 }
 
-.hidden .droplet .droplet-path {
+.hidden .droplet .droplet-path,
+.saved-view .droplet .droplet-path,
+.search-view .droplet .droplet-path
+{
 	stroke-dashoffset: 230;
 }
 /** end of droplet icon styles **/
@@ -394,7 +504,7 @@ header .menu-icon svg {
 /** mobile-only styles **/
 @media only screen and (max-width : 768px) {
 	
-	body {
+	.pane {
 		padding-top: 13em;
 	}
 	
@@ -409,7 +519,7 @@ header .menu-icon svg {
 /** desktop-only styles **/
 @media only screen and (min-width : 768px) {
 	
-	body {
+	.pane {
 		padding-top: 320px;
 	}
 	

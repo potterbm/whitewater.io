@@ -20,6 +20,18 @@ function isDesktop()
 	return $("#desktop-view").is(":visible");
 }
 
+function displayPane(targetPane)
+{
+	var $body = $("body");
+	
+	if($body.hasClass(targetPane + "-view")) {
+		return true;
+	}
+	else {
+		$body.removeClass("conditions-view saved-view search-view").addClass(targetPane + "-view");
+	}
+}
+
 
 function getWaterData(site)
 {
@@ -33,11 +45,7 @@ function getWaterData(site)
 $(document).ready(function(e) {
 	
 	$(".hamburger-icon").click(function(e) {
-		$(this).toggleClass("cross-icon");
-	});
-	
-	$(".hamburger-icon, .gear-icon, .droplet-icon").click(function(e) {
-		$(".hamburger-icon, .gear-icon, .droplet-icon").toggleClass("hidden");
+		$(this).toggleClass("hidden");
 	});
 	
 });

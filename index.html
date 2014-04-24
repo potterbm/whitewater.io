@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 	<title>whitewater.io</title>
 
@@ -23,7 +23,7 @@
    
 </head>
 
-<body class="river-information-view">
+<body class="conditions-view">
 
 <header class="">
 	<div class="menu-icon hamburger-icon">
@@ -38,9 +38,9 @@
 		<svg viewBox="0 0 100 100" class="droplet">
 			<path class="droplet-path" d="m 76.863454,63.995781 c 0,15.662328 -12.696836,28.359106 -28.359171,28.359106 -15.662339,0 -28.35917,-12.696778 -28.35917,-28.359106 0,-15.662381 12.696831,-45.606868 44.777633,-57.0500238 C 52.391763,26.51522 76.863454,40.704608 76.863454,63.995781 z"/>
 		</svg>
-	</div><!-- 
+	</div>
 	
- --><div class="menu-icon gear-icon">
+ --><div class="menu-icon gear-icon hidden">
 		<svg viewBox="0 0 100 100" class="gear">
 			<circle cx="50" cy="50" r="25" class="gear-wheel" />
 			<polygon points="60,25 55,12.5 45,12.5 40,25" class="gear-tooth" />
@@ -55,8 +55,26 @@
 	</div>
 </header>
 
-<div class="current-conditions">
+
+<div class="conditions-pane pane" data-pane="conditions">
 	<div class="flow unit-cfs">43</div>
+</div>
+
+<div class="saved-pane pane" data-pane="saved">
+	<h1 class="pane-title">Saved Rivers</h1>
+</div>
+
+<div class="search-pane pane" data-pane="search">
+	<h1 class="pane-title">Search Rivers</h1>
+	<div class="search"><input type="text" autocomplete="yes" /><button class="search-button"><span class="fa fa-search"></span></button></div>
+	<div class="search-results">
+		
+		<div class="river-result" data-id="123456">
+			<h3 class="river-title"></h3>
+			<p class="river-information"></p>
+		</div>
+		
+	</div>
 </div>
 
 
