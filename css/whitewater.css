@@ -160,7 +160,7 @@ header .menu-icon svg {
 	transform: translateX(200%);
 }
 
-.search-view body {
+.search-view .pane-container {
 	-webkit-transform: translateX(-200%);
 	-moz-transform: translateX(-200%);
 	-ms-transform: translateX(-200%);
@@ -173,7 +173,7 @@ header .menu-icon svg {
 * River Information View
 **/
 
-.conditions-view body {
+.conditions-view .pane-container {
 	-webkit-transform: translateX(0%);
 	-moz-transform: translateX(0%);
 	-ms-transform: translateX(0%);
@@ -224,7 +224,7 @@ header .menu-icon svg {
 * Saved Rivers View
 **/
 
-.saved-view body {
+.saved-view .pane-container {
 	-webkit-transform: translateX(-100%);
 	-moz-transform: translateX(-100%);
 	-ms-transform: translateX(-100%);
