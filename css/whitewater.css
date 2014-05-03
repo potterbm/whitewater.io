@@ -611,11 +611,9 @@ header .menu-icon svg {
 @media only screen and (max-width : 768px) {
 	
 	.pane-container {
-		margin-top: 13em;
 	}
 	
 	.pane-title {
-		line-height: 13em;
 	}
 	
 	#mobile-view {
@@ -630,11 +628,9 @@ header .menu-icon svg {
 @media only screen and (min-width : 768px) {
 	
 	.pane-container {
-		margin-top: 320px;
 	}
 	
 	.pane-title {
-		line-height: 320px;
 	}
 	
 	#desktop-view {
