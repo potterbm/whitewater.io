@@ -20,24 +20,11 @@ function isDesktop()
 	return $("#desktop-view").is(":visible");
 }
 
-function displayPane(targetPane)
-{
-	var $body = $("body");
-	$body.removeClass("edit-mode");
-	
-	if($body.hasClass(targetPane + "-view")) {
-		return true;
-	}
-	else {
-		$body.attr("data-last-pane", $body.attr("data-current-pane"));
-		$body.attr("data-current-pane", targetPane);
-		$body.removeClass("conditions-view saved-view search-view").addClass(targetPane + "-view");
-	}
-}
 
-function toggleRiverEditMode()
+function showMenu(e)
 {
-	$("body").toggleClass("edit-mode");
+	console.log('showMenu');
+	console.log(e);
 }
 
 
@@ -52,19 +39,7 @@ function getWaterData(site)
 
 $(document).ready(function(e) {
 	
-	$(".hamburger-icon").click(function(e) {
-		var $body = $("body");
-		
-		if($body.hasClass("conditions-view")) {
-			displayPane("saved");
-		}
-		else if($body.hasClass("saved-view")) {
-			displayPane($body.attr("data-last-pane"));
-		}
-		else if($body.hasClass("search-view")) {
-			displayPane($body.attr("data-last-pane"));
-		}
-	});
+	$$('.hamburger-icon').on('tap', showMenu);
 	
 	$(".gear-icon").click(function(e) {
 		var $body = $("body");
