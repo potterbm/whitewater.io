@@ -1,5 +1,18 @@
 
 
+function River(siteID)
+{
+	this.siteID = siteID;
+	
+}
+
+River.prototype.siteID = -1;
+
+
+
+
+
+
 function initMobile()
 {
 	
