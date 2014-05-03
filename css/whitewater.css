@@ -44,9 +44,11 @@ header {
 }
 
 header .menu-icon {
+	line-height: 200px;
 	text-align: center;
 	
 	display: inline-block;
+	height: 200px;
 	width: 20%;
 	vertical-align: middle;
 }
@@ -61,10 +63,11 @@ header .logo {
 }
 
 header .menu-icon svg {
-	display: block;
-	padding: 25%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 	width: 50%;
-	height: 50%;
 }
 
 

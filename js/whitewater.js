@@ -28,6 +28,12 @@ function showMenu(e)
 }
 
 
+function showSearch(e)
+{
+	
+}
+
+
 function getWaterData(site)
 {
 	var request = $.ajax({
