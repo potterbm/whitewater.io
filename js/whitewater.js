@@ -3,10 +3,27 @@
 function River(siteID)
 {
 	this.siteID = siteID;
-	
 }
 
 River.prototype.siteID = -1;
+River.prototype.name = "";
+
+River.prototype.fetchWaterData = function(callback) {
+	var request = $$.ajax({
+		async : true,
+		crossDomain : true,
+		dataType : "json",
+		url : "http://waterservices.usgs.gov/nwis/iv/?format=json&parameterCd=00060,00065,00010&siteType=ES,ST&site=" + this.site,
+		success : function(response) {
+			if(typeof(callback) == "function") {
+				callback(response);
+			}
+		}
+	});
+	
+	return request;
+}
+
 
 
 
@@ -37,38 +54,20 @@ function isDesktop()
 function showMenu(e)
 {
 	console.log('showMenu');
-	console.log(e);
+	alert('showMenu');
 }
 
 
 function showSearch(e)
 {
-	
+	alert('showSearch');
 }
 
 
-function getWaterData(site)
-{
-	var request = $.ajax({
-		crossDomain : true,
-		url : "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=" + site
-	});
-}
 
-
-$(document).ready(function(e) {
+$$(document).ready(function(e) {
+	console.log($$);
 	
 	$$('.hamburger-icon').on('tap', showMenu);
-	
-	$(".gear-icon").click(function(e) {
-		var $body = $("body");
-		
-		if($body.hasClass("conditions-view")) {
-			displayPane("search");
-		}
-		else if($body.hasClass("saved-view")) {
-			toggleRiverEditMode();
-		}
-	});
 	
 });

@@ -167,7 +167,6 @@ header .menu-icon svg {
 **/
 
 .search-pane {
-	background-color: green;
 	
 	-webkit-transform: translateX(200%);
 	-moz-transform: translateX(200%);
@@ -198,8 +197,6 @@ header .menu-icon svg {
 }
 
 .conditions-view .conditions-pane {
-	background-color: blue;
-	
 	text-align: center;
 }
 
@@ -249,8 +246,6 @@ header .menu-icon svg {
 }
 
 .saved-pane {
-	background-color: purple;
-	
 	-webkit-transform: translateX(100%);
 	-moz-transform: translateX(100%);
 	-ms-transform: translateX(100%);
