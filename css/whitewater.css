@@ -44,7 +44,7 @@ header {
 	transition: all 0.5s ease-in-out;
 }
 
-header .logo {
+header .logo-container {
 	font-size: 2em;
 	line-height: 200px;
 	text-align: center;
@@ -64,6 +64,17 @@ header .logo {
 	-ms-transform: translateY(-50%) translateX(-50%);
 	-o-transform: translateY(-50%) translateX(-50%);
 	transform: translateY(-50%) translateX(-50%);
+}
+
+header .logo-container .logo {
+	font-size: 1em;
+	line-height: inherit;
+	
+	display: block;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
 }
 
 
