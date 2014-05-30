@@ -166,14 +166,35 @@ header .logo-container .logo {
 	transform: scale(4);
 }
 
+.loading-view header .search-container {
+	opacity: 0;
+}
 
 
 /**
 * River Search View
 **/
 
-.search-pane {
+.search-container {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 200px;
+	width: 200px;
 	
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -100px;
+	
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.search-pane {
 	-webkit-transform: translateX(200%);
 	-moz-transform: translateX(200%);
 	-ms-transform: translateX(200%);
@@ -561,6 +582,14 @@ header .logo-container .logo {
 
 
 /** droplet icon styles **/
+.droplet {
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-moz-transition: -moz-transform 0.5s ease-in-out;
+	-ms-transition: -ms-transform 0.5s ease-in-out;
+	-o-transition: -o-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+}
+
 .droplet .droplet-path {
 	fill: none;
 	
