@@ -66,16 +66,6 @@ header .logo {
 	transform: translateY(-50%) translateX(-50%);
 }
 
-/** loading styles **/
-header.loading {
-	height: 100%;
-}
-
-header.loading .logo {
-	height: 
-}
-/** end of loading styles **/
-
 
 
 .pane-container {
@@ -152,19 +142,14 @@ header.loading .logo {
 /**
 * Loading View
 **/
-.loading-view .menu-icon {
-	display: none;
+
+.loading-view header {
+	height: 100%;
 }
 
-.loading-view .menu-icon.logo {
-	margin: 0 auto;
-	width: 30%;
-	
-	-webkit-transition: all 0.5s linear;
-	-moz-transition: all 0.5s linear;
-	-ms-transition: all 0.5s linear;
-	-o-transition: all 0.5s linear;
-	transition: all 0.5s linear;
+.loading-view header .logo {
+	height: 400px;
+	width: 400px;
 }
 
 

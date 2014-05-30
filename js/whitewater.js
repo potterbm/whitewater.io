@@ -69,7 +69,7 @@ $$(document).ready(function(e) {
 	//console.log($$);
 	
 	setTimeout(function() {
-		$$("header.loading").removeClass("loading");
+		$$("body.loading-view").removeClass("loading-view").addClass("conditions-view");
 	}, 1000);
 	
 });
