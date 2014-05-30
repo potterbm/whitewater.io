@@ -66,8 +66,10 @@ function showSearch(e)
 
 
 $$(document).ready(function(e) {
-	console.log($$);
+	//console.log($$);
 	
-	$$('.hamburger-icon').on('tap', showMenu);
+	setTimeout(function() {
+		$$("header.loading").removeClass("loading");
+	}, 250);
 	
 });

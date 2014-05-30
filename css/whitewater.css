@@ -43,32 +43,38 @@ header {
 	transition: all 0.5s ease-in-out;
 }
 
-header .menu-icon {
+header .logo {
+	font-size: 2em;
 	line-height: 200px;
 	text-align: center;
 	
 	display: inline-block;
-	height: 200px;
-	width: 20%;
-	vertical-align: middle;
-}
-
-header .logo {
-	font-size: 2em;
-	text-align: center;
-	
-	display: inline-block;
-	margin: 0 20%;
-	vertical-align: middle;
-}
-
-header .menu-icon svg {
-	display: inline-block;
 	margin: 0;
 	padding: 0;
-	height: 100%;
-	width: 50%;
+	height: 200px;
+	width: 200px;
+	
+	position: relative;
+	top: 50%;
+	left: 50%;
+	
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	-moz-transform: translateY(-50%) translateX(-50%);
+	-ms-transform: translateY(-50%) translateX(-50%);
+	-o-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
 }
+
+/** loading styles **/
+header.loading {
+	height: 100%;
+}
+
+header.loading .logo {
+	height: 
+}
+/** end of loading styles **/
+
 
 
 .pane-container {
@@ -378,13 +384,6 @@ header .menu-icon svg {
 
 
 /** gear icon styles **/
-.edit-mode .gear {
-	-webkit-animation: spin 2s linear 0s infinite;
-	-moz-animation: spin 2s linear 0s infinite;
-	-ms-animation: spin 2s linear 0s infinite;
-	-o-animation: spin 2s linear 0s infinite;
-	animation: spin 2s linear 0s infinite;
-}
 
 .gear .gear-wheel {
 	fill: none;
