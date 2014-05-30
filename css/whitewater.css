@@ -159,8 +159,11 @@ header .logo-container .logo {
 }
 
 .loading-view header .logo {
-	height: 400px;
-	width: 400px;
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-ms-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
 }
 
 
