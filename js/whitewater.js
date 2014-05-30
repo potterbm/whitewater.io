@@ -69,7 +69,7 @@ $$(document).ready(function(e) {
 	//console.log($$);
 	
 	setTimeout(function() {
-		$$("header.loading").removeClass("loading");
+		//$$("header.loading").removeClass("loading");
 	}, 250);
 	
 });
