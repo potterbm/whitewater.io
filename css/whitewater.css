@@ -25,7 +25,7 @@ header {
 	color: #2980B9;
 	
 	font-size: 1.4rem;
-	line-height: 2;
+	line-height: 200px;
 	
 	display: block;
 	margin: 0;
@@ -55,7 +55,7 @@ header .logo-container {
 	height: 200px;
 	width: 200px;
 	
-	position: relative;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	
@@ -578,14 +578,6 @@ header .logo-container .logo {
 	-ms-transform-origin: 50% 50%;
 	-o-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
-}
-
-.conditions-view .droplet-path {
-	-webkit-transform: scale(1.5);
-	-moz-transform: scale(1.5);
-	-ms-transform: scale(1.5);
-	-o-transform: scale(1.5);
-	transform: scale(1.5);
 }
 
 .hidden .droplet .droplet-path
