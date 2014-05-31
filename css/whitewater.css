@@ -1,7 +1,7 @@
 body {
 	background-color: #2980b9;
 	background-color: #eeeeee;
-	color: #f0f0f0;
+	color: #2980b9;
 	color: rgba(255, 255, 255, 0.8);
 	
 	font-family: 'Roboto', sans-serif;
@@ -225,7 +225,7 @@ header .logo-container .logo {
 	border-color: rgba(0, 0, 0, 0.3);
 	opacity: 1;
 	
-	width: 600px;
+	width: 750px;
 }
 
 .search-container .search-icon {
@@ -295,10 +295,11 @@ header .logo-container .logo {
 	text-align: center;
 }
 
-.conditions-view .flow {
+.conditions-view .condition {
+	
 	font-family: 'Roboto', sans-serif;
 	font-size: 30em;
-	line-height: 2;
+	line-height: 1.2;
 	font-weight: 100;
 	text-align: center;
 	
@@ -307,10 +308,29 @@ header .logo-container .logo {
 	position: relative;
 }
 
-.conditions-view .unit-cfs:after {
-	color: rgba(255, 255, 255, 0.5);
+.conditions-vew .condition[data-title]:before {
+	color: rgba(0, 0, 0, 0.3);
 	
-	content: "f\b3/s";
+	content: attr(data-title);
+	font-size: .25em;
+	line-height: 1.5;
+	font-weight: 100;
+	text-align: center;
+	text-transform: uppercase;
+	
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	width: 100%;
+	
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+}
+
+.conditions-view .unit-label:after {
+	opacity: 0.5;
 	
 	font-size: .25em;
 	font-weight: 100;
@@ -325,6 +345,14 @@ header .logo-container .logo {
 	position: absolute;
 	top: 2em;
 	left: 100%;
+}
+
+.conditions-view .unit-cfs:after {
+	content: "f\b3/s";
+}
+
+.conditions-view .unit-ft:after {
+	content: "ft";
 }
 
 
