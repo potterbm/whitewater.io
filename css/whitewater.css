@@ -308,10 +308,11 @@ header .logo-container .logo {
 	position: relative;
 }
 
-.conditions-vew .condition[data-title]:before {
+.conditions-view .condition:before {
 	color: rgba(0, 0, 0, 0.5);
 	
 	content: attr(data-title);
+	content: "title thing";
 	font-size: .125em;
 	line-height: 1.5;
 	font-weight: 100;
