@@ -308,12 +308,11 @@ header .logo-container .logo {
 	position: relative;
 }
 
-.conditions-vew .condition:before {
-	color: rgba(0, 0, 0, 0.3);
+.conditions-vew .condition[data-title]:before {
+	color: rgba(0, 0, 0, 0.5);
 	
 	content: attr(data-title);
-	content: "Title";
-	font-size: .25em;
+	font-size: .125em;
 	line-height: 1.5;
 	font-weight: 100;
 	text-align: center;
@@ -326,7 +325,7 @@ header .logo-container .logo {
 	width: 100%;
 	
 	position: absolute;
-	bottom: 100%;
+	top: 0;
 	left: 0;
 }
 
