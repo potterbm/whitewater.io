@@ -77,8 +77,8 @@ $$(document).ready(function(e) {
 	}, 2000);
 	
 	
-	$(".search-icon").tap(function() {
-		$(".search-container input").trigger('focus');
+	$$(".search-icon").tap(function() {
+		$$(".search-container input").trigger('focus');
 	});
 	
 });
