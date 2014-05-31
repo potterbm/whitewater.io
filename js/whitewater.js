@@ -72,4 +72,13 @@ $$(document).ready(function(e) {
 		$$("body.loading-view").removeClass("loading-view").addClass("conditions-view");
 	}, 1000);
 	
+	
+	$(".search-icon").tap(function() {
+		$(".search-container input").focus();
+	});
+	
 });
+
+
+
+
