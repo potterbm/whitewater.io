@@ -218,17 +218,17 @@ header .logo-container .logo {
 	bottom: 0;
 	z-index: -1;
 	
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
-	-moz-transition: -moz-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
-	-ms-transition: -ms-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
-	-o-transition: -o-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
-	transition: transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
+	-webkit-transition: -webkit-transform 0.5s ease-in 0.75s;
+	-moz-transition: -moz-transform 0.5s ease-in 0.75s;
+	-ms-transition: -ms-transform 0.5s ease-in 0.75s;
+	-o-transition: -o-transform 0.5s ease-in 0.75s;
+	transition: transform 0.5s ease-in 0.75s;
 	
-	-webkit-transform: translateY(-150%);
-	-moz-transform: translateY(-150%);
-	-ms-transform: translateY(-150%);
-	-o-transform: translateY(-150%);
-	transform: translateY(-150%);
+	-webkit-transform: translateY(-140%);
+	-moz-transform: translateY(-140%);
+	-ms-transform: translateY(-140%);
+	-o-transform: translateY(-140%);
+	transform: translateY(-140%);
 }
 
 .search-container input:focus ~ .search-results {
