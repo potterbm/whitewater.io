@@ -308,13 +308,12 @@ header .logo-container .logo {
 	position: relative;
 }
 
-.conditions-view .condition:before {
-	color: rgba(0, 0, 0, 0.5);
+.conditions-view .condition[data-title]:before {
+	color: rgba(0, 0, 0, 0.6);
 	
 	content: attr(data-title);
-	content: "title thing";
 	font-size: .125em;
-	line-height: 1.5;
+	line-height: 2;
 	font-weight: 100;
 	text-align: center;
 	text-transform: uppercase;
