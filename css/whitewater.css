@@ -445,26 +445,19 @@ header .logo-container .logo {
 /** end of cross icon styles **/
 
 
-/** gear icon styles **/
-
-.gear .gear-wheel {
+/** search icon styles **/
+.search-icon circle {
 	fill: none;
 	
 	stroke: rgba(255, 255, 255, 0.8);
 	stroke: #2980b9;
 	stroke-width: 7.5%;
 	
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
-	-moz-transition: -moz-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
-	-ms-transition: -ms-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
-	-o-transition: -o-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
-	transition: transform 0.5s cubic-bezier(0, 1.4, 1, 1.4);
-	
-	-webkit-transform: translateX(0%) translateY(0%);
-	-moz-transform: translateX(0%) translateY(0%);
-	-ms-transform: translateX(0%) translateY(0%);
-	-o-transform: translateX(0%) translateY(0%);
-	transform: translateX(0%) translateY(0%);
+	-webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 1.4, 1, 1.4);
+	-moz-transition: -moz-transform 0.3s cubic-bezier(0, 1.4, 1, 1.4);
+	-ms-transition: -ms-transform 0.3s cubic-bezier(0, 1.4, 1, 1.4);
+	-o-transition: -o-transform 0.3s cubic-bezier(0, 1.4, 1, 1.4);
+	transition: transform 0.3s cubic-bezier(0, 1.4, 1, 1.4);
 	
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
@@ -473,131 +466,17 @@ header .logo-container .logo {
 	transform-origin: 50% 50%;
 }
 
-.hidden .gear .gear-wheel,
-.search-view .gear .gear-wheel
+.hidden.search-icon circle,
+.hidden .search-icon circle
 {
 	-webkit-transform: scale(0);
 	-moz-transform: scale(0);
 	-ms-transform: scale(0);
 	-o-transform: scale(0);
 	transform: scale(0);
-	
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4) 0.6s;
-	-moz-transition: -moz-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4) 0.6s;
-	-ms-transition: -ms-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4) 0.6s;
-	-o-transition: -o-transform 0.5s cubic-bezier(0, 1.4, 1, 1.4) 0.6s;
-	transition: transform 0.5s cubic-bezier(0, 1.4, 1, 1.4) 0.6s;
 }
 
-.conditions-view .gear .gear-wheel {
-	-webkit-transform: translateY(-30%) translateX(-30%);
-	-moz-transform: translateY(-30%) translateX(-30%);
-	-ms-transform: translateY(-30%) translateX(-30%);
-	-o-transform: translateY(-30%) translateX(-30%);
-	transform: translateY(-30%) translateX(-30%);
-}
-
-.gear .gear-tooth {
-	fill: rgba(255, 255, 255, 0.8);
-	fill: #2980b9;
-	
-	-webkit-transform-origin: 50% 300%;
-	-moz-transform-origin: 50% 300%;
-	-ms-transform-origin: 50% 300%;
-	-o-transform-origin: 50% 300%;
-	transform-origin: 50% 300%;
-	
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0.7s, opacity 0.01s linear 0.45s;
-	-moz-transition: -moz-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0.7s, opacity 0.01s linear 0.45s;
-	-ms-transition: -ms-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0.7s, opacity 0.01s linear 0.45s;
-	-o-transition: -o-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0.7s, opacity 0.01s linear 0.45s;
-	transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0.7s, opacity 0.01s linear 0.45s;
-}
-
-.hidden .gear .gear-tooth,
-.conditions-view .gear .gear-tooth,
-.search-view .gear .gear-tooth
-{
-	opacity: 0;
-	
-	-webkit-transform: rotateZ(0deg);
-	-moz-transform: rotateZ(0deg);
-	-ms-transform: rotateZ(0deg);
-	-o-transform: rotateZ(0deg);
-	transform: rotateZ(0deg);
-	
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0s, opacity 0.1s linear 0.5s;
-	-moz-transition: -moz-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0s, opacity 0.1s linear 0.5s;
-	-ms-transition: -ms-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0s, opacity 0.1s linear 0.5s;
-	-o-transition: -o-transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0s, opacity 0.1s linear 0.5s;
-	transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1) 0s, opacity 0.1s linear 0.5s;
-}
-
-.gear-tooth:nth-of-type(n+1) {
-	-webkit-transform: rotateZ(0deg);
-	-moz-transform: rotateZ(0deg);
-	-ms-transform: rotateZ(0deg);
-	-o-transform: rotateZ(0deg);
-	transform: rotateZ(0deg);
-}
-
-.gear-tooth:nth-of-type(n+2) {
-	-webkit-transform: rotateZ(45deg);
-	-moz-transform: rotateZ(45deg);
-	-ms-transform: rotateZ(45deg);
-	-o-transform: rotateZ(45deg);
-	transform: rotateZ(45deg);
-}
-
-.gear-tooth:nth-of-type(n+3) {
-	-webkit-transform: rotateZ(90deg);
-	-moz-transform: rotateZ(90deg);
-	-ms-transform: rotateZ(90deg);
-	-o-transform: rotateZ(90deg);
-	transform: rotateZ(90deg);
-}
-
-.gear-tooth:nth-of-type(n+4) {
-	-webkit-transform: rotateZ(135deg);
-	-moz-transform: rotateZ(135deg);
-	-ms-transform: rotateZ(135deg);
-	-o-transform: rotateZ(135deg);
-	transform: rotateZ(135deg);
-}
-
-.gear-tooth:nth-of-type(n+5) {
-	-webkit-transform: rotateZ(180deg);
-	-moz-transform: rotateZ(180deg);
-	-ms-transform: rotateZ(180deg);
-	-o-transform: rotateZ(180deg);
-	transform: rotateZ(180deg);
-}
-
-.gear-tooth:nth-of-type(n+6) {
-	-webkit-transform: rotateZ(225deg);
-	-moz-transform: rotateZ(225deg);
-	-ms-transform: rotateZ(225deg);
-	-o-transform: rotateZ(225deg);
-	transform: rotateZ(225deg);
-}
-
-.gear-tooth:nth-of-type(n+7) {
-	-webkit-transform: rotateZ(270deg);
-	-moz-transform: rotateZ(270deg);
-	-ms-transform: rotateZ(270deg);
-	-o-transform: rotateZ(270deg);
-	transform: rotateZ(270deg);
-}
-
-.gear-tooth:nth-of-type(n+8) {
-	-webkit-transform: rotateZ(315deg);
-	-moz-transform: rotateZ(315deg);
-	-ms-transform: rotateZ(315deg);
-	-o-transform: rotateZ(315deg);
-	transform: rotateZ(315deg);
-}
-
-.gear-line {
+.search-icon line {
 	fill: none;
 	
 	stroke: rgba(255, 255, 255, 0.8);
@@ -606,16 +485,15 @@ header .logo-container .logo {
 	stroke-dasharray: 50;
 	stroke-linecap: round;
 	
-	-webkit-transition: stroke-dashoffset 0.3s ease-in-out;
-	-moz-transition: stroke-dashoffset 0.3s ease-in-out;
-	-ms-transition: stroke-dashoffset 0.3s ease-in-out;
-	-o-transition: stroke-dashoffset 0.3s ease-in-out;
-	transition: stroke-dashoffset 0.3s ease-in-out;
+	-webkit-transition: stroke-dashoffset 0.3s ease-in 0.2s;
+	-moz-transition: stroke-dashoffset 0.3s ease-in 0.2s;
+	-ms-transition: stroke-dashoffset 0.3s ease-in 0.2s;
+	-o-transition: stroke-dashoffset 0.3s ease-in 0.2s;
+	transition: stroke-dashoffset 0.3s ease-in 0.2s;
 }
 
-.hidden .gear .gear-line,
-.saved-view .gear-line,
-.search-view .gear-line
+.hidden.search-icon line,
+.hidden .search-icon line
 {
 	stroke-dashoffset: 50;
 }
