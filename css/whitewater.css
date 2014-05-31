@@ -2,7 +2,6 @@ body {
 	background-color: #2980b9;
 	background-color: #eeeeee;
 	color: #2980b9;
-	color: rgba(255, 255, 255, 0.8);
 	
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
@@ -296,6 +295,7 @@ header .logo-container .logo {
 }
 
 .conditions-view .condition {
+	opacity: 0.5;
 	
 	font-family: 'Roboto', sans-serif;
 	font-size: 30em;
