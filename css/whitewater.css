@@ -79,7 +79,7 @@ header .logo-container .logo {
 
 
 
-.pane-container {
+.container {
 	display: block;
 	margin: 0;
 	margin-top: 200px;
@@ -202,16 +202,54 @@ header .logo-container .logo {
 	transform: scale(0.6);
 }
 
+.search-results {
+	background-color: rgba(255, 255 255, 0.5);
+	
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding-top: 200px;
+	height: auto;
+	width: auto;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
+	-moz-transition: -moz-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
+	-ms-transition: -ms-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
+	-o-transition: -o-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
+	transition: transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
+	
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.search-container input:focus ~ .search-results {
+	
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
 
 /**
 * River Information View
 **/
 
-.conditions-pane {
+.river-conditions {
 	text-align: center;
 }
 
-.conditions-pane .river-title {
+.river-conditions .river-title {
 	color: rgba(0, 0, 0, 0.8);
 	
 	font-size: 5em;
@@ -223,7 +261,7 @@ header .logo-container .logo {
 	margin: 50px;
 }
 
-.conditions-pane .river-location {
+.river-conditions .river-location {
 	color: rgba(0, 0, 0, 0.3);
 	
 	font-size: .5em;
@@ -232,7 +270,7 @@ header .logo-container .logo {
 	display: block;
 }
 
-.conditions-pane .condition {
+.river-conditions .condition {
 	
 	font-family: 'Roboto', sans-serif;
 	font-size: 30em;
@@ -245,7 +283,7 @@ header .logo-container .logo {
 	position: relative;
 }
 
-.conditions-pane .condition[data-title]:before {
+.river-conditions .condition[data-title]:before {
 	color: rgba(0, 0, 0, 0.6);
 	
 	content: attr(data-title);
@@ -266,7 +304,7 @@ header .logo-container .logo {
 	left: 0;
 }
 
-.conditions-pane .condition.unit-label:after {
+.river-conditions .condition.unit-label:after {
 	opacity: 0.5;
 	
 	font-size: .25em;
@@ -284,11 +322,11 @@ header .logo-container .logo {
 	left: 100%;
 }
 
-.conditions-pane .condition.unit-cfs:after {
+.river-conditions .condition.unit-cfs:after {
 	content: "f\b3/s";
 }
 
-.conditions-pane .condition.unit-ft:after {
+.river-conditions .condition.unit-ft:after {
 	content: "ft";
 }
 
