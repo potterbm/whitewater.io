@@ -312,6 +312,7 @@ header .logo-container .logo {
 	color: rgba(0, 0, 0, 0.3);
 	
 	content: attr(data-title);
+	content: "Title";
 	font-size: .25em;
 	line-height: 1.5;
 	font-weight: 100;
@@ -329,7 +330,7 @@ header .logo-container .logo {
 	left: 0;
 }
 
-.conditions-view .unit-label:after {
+.conditions-view .condition.unit-label:after {
 	opacity: 0.5;
 	
 	font-size: .25em;
@@ -343,15 +344,15 @@ header .logo-container .logo {
 	vertical-align: top;
 	
 	position: absolute;
-	top: 2em;
+	top: 1em;
 	left: 100%;
 }
 
-.conditions-view .unit-cfs:after {
+.conditions-view .condition.unit-cfs:after {
 	content: "f\b3/s";
 }
 
-.conditions-view .unit-ft:after {
+.conditions-view .condition.unit-ft:after {
 	content: "ft";
 }
 
