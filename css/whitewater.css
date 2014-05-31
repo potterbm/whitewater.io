@@ -227,6 +227,7 @@ header .logo-container .logo {
 }
 
 .search-container .search-icon {
+	opacity: 1;
 	
 	display: inline-block;
 	margin: 0;
@@ -239,19 +240,21 @@ header .logo-container .logo {
 	top: 50%;
 	margin-top: -100px;
 	
-	-webkit-transition: -webkit-transform 0.3s ease-in-out;
-	-moz-transition: -moz-transform 0.3s ease-in-out;
-	-ms-transition: -ms-transform 0.3s ease-in-out;
-	-o-transition: -o-transform 0.3s ease-in-out;
-	transition: transform 0.3s ease-in-out;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-moz-transition: -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-ms-transition: -ms-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-o-transition: -o-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .search-container input:focus + .search-icon {
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	-ms-transform: scale(0.8);
-	-o-transform: scale(0.8);
-	transform: scale(0.8);
+	opacity: 0.75;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	-ms-transform: scale(0.6);
+	-o-transform: scale(0.6);
+	transform: scale(0.6);
 }
 
 
