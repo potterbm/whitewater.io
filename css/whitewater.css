@@ -208,9 +208,11 @@ header .logo-container .logo {
 	display: block;
 	margin: 25px 0;
 	padding: 25px 50px;
-	padding-right: 200px;
 	height: 100px;
-	width: 0;
+	width: 50px;
+	
+	position: relative;
+	z-index: 1;
 	
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -239,6 +241,7 @@ header .logo-container .logo {
 	right: 0;
 	top: 50%;
 	margin-top: -62.5px;
+	z-index: 0;
 	
 	-webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 	-moz-transition: -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
