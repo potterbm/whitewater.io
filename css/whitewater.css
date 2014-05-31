@@ -51,9 +51,10 @@ header .logo-container {
 	
 	display: inline-block;
 	margin: 0;
+	margin-top: 50px;
 	padding: 0;
-	height: 200px;
-	width: 200px;
+	height: 150px;
+	width: 150px;
 	
 	position: absolute;
 	top: 50%;
