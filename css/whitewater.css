@@ -232,13 +232,13 @@ header .logo-container .logo {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	height: 150px;
-	width: 150px;
+	height: 125px;
+	width: 125px;
 	
 	position: absolute;
 	right: 0;
 	top: 50%;
-	margin-top: -75px;
+	margin-top: -62.5px;
 	
 	-webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 	-moz-transition: -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
