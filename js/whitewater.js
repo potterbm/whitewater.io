@@ -78,7 +78,7 @@ $$(document).ready(function(e) {
 	
 	
 	$(".search-icon").tap(function() {
-		$(".search-container input").focus();
+		$(".search-container input").trigger('focus');
 	});
 	
 });
