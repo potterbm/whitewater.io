@@ -296,7 +296,6 @@ header .logo-container .logo {
 }
 
 .conditions-view .condition {
-	opacity: 0.5;
 	
 	font-family: 'Roboto', sans-serif;
 	font-size: 30em;
@@ -309,7 +308,7 @@ header .logo-container .logo {
 	position: relative;
 }
 
-.conditions-vew .condition[data-title]:before {
+.conditions-vew .condition:before {
 	color: rgba(0, 0, 0, 0.3);
 	
 	content: attr(data-title);
