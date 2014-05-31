@@ -82,71 +82,11 @@ header .logo-container .logo {
 .pane-container {
 	display: block;
 	margin: 0;
+	margin-top: 200px;
 	padding: 0;
 	overflow: hidden;
 	
-	position: absolute;
-	top: 200px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	
-	-webkit-transition: -webkit-transform 0.5s linear 0s;
-	-moz-transition: -moz-transform 0.5s linear 0s;
-	-ms-transition: -ms-transform 0.5s linear 0s;
-	-o-transition: -o-transform 0.5s linear 0s;
-	transition: transform 0.5s linear 0s;
-}
-
-.pane {
-	display: block;
-	margin: 0;
-	padding: 0;
-	
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-.pane-title {
-	color: #2980b9;
-	
-	font-size: 5em;
-	font-weight: 500;
-	text-align: center;
-	
-	display: block;
-	margin: 0 auto;
-	padding: 0;
-	width: 50%;
-	
-	position: fixed;
-	top: 0;
-	left: 25%;
-	
-	-webkit-transform: translateY(-200%);
-	-moz-transform: translateY(-200%);
-	-ms-transform: translateY(-200%);
-	-o-transform: translateY(-200%);
-	transform: translateY(-200%);
-}
-
-.saved-view .saved-pane .pane-title,
-.search-view .search-pane .pane-title
-{
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(1, 1.5, 0, 1) 0.5s;
-	-moz-transition: -moz-transform 0.5s cubic-bezier(1, 1.5, 0, 1) 0.5s;
-	-ms-transition: -ms-transform 0.5s cubic-bezier(1, 1.5, 0, 1) 0.5s;
-	-o-transition: -o-transform 0.5s cubic-bezier(1, 1.5, 0, 1) 0.5s;
-	transition: transform 0.5s cubic-bezier(1, 1.5, 0, 1) 0.5s;
-	
-	-webkit-transform: translateY(-100%);
-	-moz-transform: translateY(-100%);
-	-ms-transform: translateY(-100%);
-	-o-transform: translateY(-100%);
-	transform: translateY(-100%);
+	position: relative;
 }
 
 
@@ -155,6 +95,8 @@ header .logo-container .logo {
 **/
 
 .loading-view header {
+	background-color: #ffffff;
+	
 	height: 100%;
 }
 
@@ -261,35 +203,9 @@ header .logo-container .logo {
 }
 
 
-
-.search-pane {
-	-webkit-transform: translateX(200%);
-	-moz-transform: translateX(200%);
-	-ms-transform: translateX(200%);
-	-o-transform: translateX(200%);
-	transform: translateX(200%);
-}
-
-.search-view .pane-container {
-	-webkit-transform: translateX(-200%);
-	-moz-transform: translateX(-200%);
-	-ms-transform: translateX(-200%);
-	-o-transform: translateX(-200%);
-	transform: translateX(-200%);
-}
-
-
 /**
 * River Information View
 **/
-
-.conditions-view .pane-container {
-	-webkit-transform: translateX(0%);
-	-moz-transform: translateX(0%);
-	-ms-transform: translateX(0%);
-	-o-transform: translateX(0%);
-	transform: translateX(0%);
-}
 
 .conditions-pane {
 	text-align: center;
@@ -381,21 +297,6 @@ header .logo-container .logo {
 * Saved Rivers View
 **/
 
-.saved-view .pane-container {
-	-webkit-transform: translateX(-100%);
-	-moz-transform: translateX(-100%);
-	-ms-transform: translateX(-100%);
-	-o-transform: translateX(-100%);
-	transform: translateX(-100%);
-}
-
-.saved-pane {
-	-webkit-transform: translateX(100%);
-	-moz-transform: translateX(100%);
-	-ms-transform: translateX(100%);
-	-o-transform: translateX(100%);
-	transform: translateX(100%);
-}
 
 
 
@@ -412,113 +313,6 @@ header .logo-container .logo {
 * Browser View
 **/
 
-
-/** hamburger icon styles **/
-.hamburger {
-	-webkit-transition: -webkit-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
-	-moz-transition: -moz-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
-	-ms-transition: -ms-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
-	-o-transition: -o-transform 0.4s cubic-bezier(1, 1.5, 0, 1);
-	transition: transform 0.4s cubic-bezier(1, 1.5, 0, 1);
-}
-
-.hamburger-line {
-	stroke-width: 10%;
-	stroke: #2980b9;
-	stroke-linecap: round;
-	
-	-webkit-transform-origin: 50% 50%;
-	-moz-transform-origin: 50% 50%;
-	-ms-transform-origin: 50% 50%;
-	-o-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-}
-
-.hamburger-rect {
-	fill: rgba(255, 255, 255, 0.8);
-	fill: #2980b9;
-	
-	-webkit-transform-origin: 50% 50%;
-	-moz-transform-origin: 50% 50%;
-	-ms-transform-origin: 50% 50%;
-	-o-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	
-	-webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.3s ease-in;
-	-moz-transition: -moz-transform 0.4s ease-in-out, opacity 0.3s ease-in;
-	-ms-transition: -ms-transform 0.4s ease-in-out, opacity 0.3s ease-in;
-	-o-transition: -o-transform 0.4s ease-in-out, opacity 0.3s ease-in;
-	transition: transform 0.4s ease-in-out, opacity 0.3s ease-in;
-}
-
-.hidden .hamburger .hamburger-rect,
-.edit-mode .hamburger .hamburger-rect
-{
-	-webkit-transition-delay: 0s, 0.2s;
-	-moz-transition-delay: 0s, 0.2s;
-	-ms-transition-delay: 0s, 0.2s;
-	-o-transition-delay: 0s, 0.2s;
-	transition-delay: 0s, 0.2s;
-	
-	opacity: 0;
-}
-
-.hidden .hamburger .hamburger-top,
-.edit-mode .hamburger .hamburger-top
-{
-	-webkit-transform: translateY(250%) rotateZ(180deg);
-	-moz-transform: translateY(250%) rotateZ(180deg);
-	-ms-transform: translateY(250%) rotateZ(180deg);
-	-o-transform: translateY(250%) rotateZ(180deg);
-	transform: translateY(250%) rotateZ(180deg);
-}
-
-.hidden .hamburger .hamburger-bottom,
-.edit-mode .hamburger .hamburger-bottom
-{
-	-webkit-transform: translateY(-250%) rotateZ(-180deg);
-	-moz-transform: translateY(-250%) rotateZ(-180deg);
-	-ms-transform: translateY(-250%) rotateZ(-180deg);
-	-o-transform: translateY(-250%) rotateZ(-180deg);
-	transform: translateY(-250%) rotateZ(-180deg);
-}
-/** end of hamburger icon styles **/
-
-
-/** cross icon styles **/
-.cross-icon .hamburger-top,
-.saved-view .hamburger-top,
-.search-view .hamburger-top
-{
-	-webkit-transform: translateY(250%) rotateZ(45deg);
-	-moz-transform: translateY(250%) rotateZ(45deg);
-	-ms-transform: translateY(250%) rotateZ(45deg);
-	-o-transform: translateY(250%) rotateZ(45deg);
-	transform: translateY(250%) rotateZ(45deg);
-}
-
-.cross-icon .hamburger-middle,
-.saved-view .hamburger-middle,
-.search-view .hamburger-middle
-{
-	-webkit-transform: rotateZ(45deg);
-	-moz-transform: rotateZ(45deg);
-	-ms-transform: rotateZ(45deg);
-	-o-transform: rotateZ(45deg);
-	transform: rotateZ(45deg);
-}
-
-.cross-icon .hamburger-bottom,
-.saved-view .hamburger-bottom,
-.search-view .hamburger-bottom
-{
-	-webkit-transform: translateY(-250%) rotateZ(-45deg);
-	-moz-transform: translateY(-250%) rotateZ(-45deg);
-	-ms-transform: translateY(-250%) rotateZ(-45deg);
-	-o-transform: translateY(-250%) rotateZ(-45deg);
-	transform: translateY(-250%) rotateZ(-45deg);
-}
-/** end of cross icon styles **/
 
 
 /** search icon styles **/
@@ -646,6 +440,7 @@ header .logo-container .logo {
 	}
 }
 /** end of desktop-only styles **/
+
 
 
 
