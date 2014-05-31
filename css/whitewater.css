@@ -224,11 +224,11 @@ header .logo-container .logo {
 	-o-transition: -o-transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
 	transition: transform 0.5s cubic-bezier(1, 2, 0, 0.5) 0.75s;
 	
-	-webkit-transform: translateY(-100%);
-	-moz-transform: translateY(-100%);
-	-ms-transform: translateY(-100%);
-	-o-transform: translateY(-100%);
-	transform: translateY(-100%);
+	-webkit-transform: translateY(-150%);
+	-moz-transform: translateY(-150%);
+	-ms-transform: translateY(-150%);
+	-o-transform: translateY(-150%);
+	transform: translateY(-150%);
 }
 
 .search-container input:focus ~ .search-results {
