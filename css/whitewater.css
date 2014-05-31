@@ -176,6 +176,8 @@ header .logo-container .logo {
 **/
 
 .search-container {
+	background-color: #ffffff;
+	
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -195,15 +197,17 @@ header .logo-container .logo {
 }
 
 .search-container input {
+	border-radius: 50px;
+	
 	opacity: 0;
 	
 	font-size: 100px;
 	
 	display: block;
-	margin: 50px 0;
-	padding: 50px 0;
+	margin: 25px 0;
+	padding: 25px 50px;
 	padding-right: 200px;
-	height: 10px;
+	height: 100px;
 	width: 0;
 	
 	-webkit-transition: all 0.5s ease-in-out;
@@ -214,7 +218,7 @@ header .logo-container .logo {
 }
 
 .search-container input:focus {
-	
+	opacity: 1;
 	
 	width: 600px;
 }
@@ -231,6 +235,20 @@ header .logo-container .logo {
 	right: 0;
 	top: 50%;
 	margin-top: -100px;
+	
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	-moz-transition: -moz-transform 0.3s ease-in-out;
+	-ms-transition: -ms-transform 0.3s ease-in-out;
+	-o-transition: -o-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
+
+.search-container input:focus + .search-icon {
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
 }
 
 
