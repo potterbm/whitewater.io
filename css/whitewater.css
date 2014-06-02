@@ -508,11 +508,13 @@ header .logo-container .logo {
 	
 	
 	.search-results {
-		-webkit-transform: translateY(-130%);
+		top: 100px;
+		
+		/*-webkit-transform: translateY(-130%);
 		-moz-transform: translateY(-130%);
 		-ms-transform: translateY(-130%);
 		-o-transform: translateY(-130%);
-		transform: translateY(-130%);
+		transform: translateY(-130%);*/
 	}
 	
 	
