@@ -30,7 +30,10 @@ function isDesktop()
 
 
 $$(document).ready(function(e) {
-	//console.log($$);
+	
+	if(isDesktop()) {
+		
+	}
 	
 	setTimeout(function() {
 		$$("body.loading-view").removeClass("loading-view").addClass("conditions-view");

@@ -23,13 +23,13 @@ header {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 	color: #2980B9;
 	
-	font-size: 1.4rem;
-	line-height: 200px;
+	font-size: 100px;
+	line-height: 2;
 	
 	display: block;
 	margin: 0;
 	padding: 0;
-	height: 200px;
+	height: 2em;
 	width: 100%;
 	
 	position: fixed;
@@ -45,15 +45,15 @@ header {
 }
 
 header .logo-container {
-	font-size: 2em;
-	line-height: 200px;
+	font-size: 1em;
+	line-height: 2;
 	text-align: center;
 	
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	height: 150px;
-	width: 150px;
+	height: 1.5em;
+	width: 1.5em;
 	
 	position: absolute;
 	top: 50%;
@@ -117,18 +117,18 @@ header .logo-container .logo {
 * River Search View
 **/
 
-.search-container {
+header .search-container {
 	background-color: #ffffff;
 	
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	height: 200px;
+	height: 2em;
 	
 	position: absolute;
-	right: 50px;
+	right: .5em;
 	top: 50%;
-	margin-top: -100px;
+	margin-top: -1em;
 	z-index: 1;
 	
 	-webkit-transition: opacity 0.5s ease-in-out;
@@ -138,20 +138,20 @@ header .logo-container .logo {
 	transition: opacity 0.5s ease-in-out;
 }
 
-.search-container input {
+header .search-container input {
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 100px;
+	border-radius: 2em;
 	
 	opacity: 0;
 	
-	font-size: 60px;
-	line-height: 100px;
+	font-size: .5em;
+	line-height: 2;
 	
 	display: block;
-	margin: 25px 0;
-	padding: 25px 50px;
-	height: 100px;
-	width: 50px;
+	margin: .5em 0;
+	padding: .5em 1em;
+	height: 2em;
+	width: 1em;
 	
 	position: relative;
 	z-index: 1;
@@ -163,26 +163,26 @@ header .logo-container .logo {
 	transition: all 0.5s ease-in-out;
 }
 
-.search-container input:focus {
+header .search-container input:focus {
 	border-color: rgba(0, 0, 0, 0.3);
 	opacity: 1;
 	
-	width: 750px;
+	width: 15em;
 }
 
-.search-container .search-icon {
+header .search-container .search-icon {
 	opacity: 1;
 	
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	height: 125px;
-	width: 125px;
+	height: 1.25em;
+	width: 1.25em;
 	
 	position: absolute;
 	right: 0;
 	top: 50%;
-	margin-top: -62.5px;
+	margin-top: -.625em;
 	z-index: 0;
 	
 	-webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -192,7 +192,7 @@ header .logo-container .logo {
 	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.search-container input:focus ~ .search-icon {
+header .search-container input:focus ~ .search-icon {
 	opacity: 0.75;
 	
 	-webkit-transform: scale(0.6);
@@ -204,6 +204,8 @@ header .logo-container .logo {
 
 .search-results {
 	background-color: rgba(255, 255, 255, 0.95);
+	
+	font-size: 1rem;
 	
 	display: block;
 	margin: 0;
@@ -476,10 +478,10 @@ header .logo-container .logo {
 	header {
 		border-bottom-color: rgba(0, 0, 0, 0.15);
 		
-		line-height: 100px;
-		height: 100px;
+		font-size: 50px;
 	}
 	
+	/*
 	header .logo-container {
 		line-height: 100px;
 		height: 75px;
@@ -522,7 +524,7 @@ header .logo-container .logo {
 	header .search-container input:focus + .search-icon {
 		
 	}
-	
+	*/
 	
 	.search-results {
 		top: 100px;
