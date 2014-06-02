@@ -479,9 +479,13 @@ header .logo-container .logo {
 	
 	.river-conditions .condition.unit-label:after {
 		display: inline-block;
-		margin-left: 5em;
+		margin-left: 2em;
 		width: 0;
 		vertical-align: top;
+		
+		position: static;
+		top: auto;
+		left: auto;
 	}
 }
 /** end of desktop-only styles **/
