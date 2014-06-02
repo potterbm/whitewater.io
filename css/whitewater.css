@@ -467,14 +467,21 @@ header .logo-container .logo {
 /** desktop-only styles **/
 @media only screen and (min-width : 768px) {
 	
-	.pane-container {
-	}
-	
-	.pane-title {
-	}
 	
 	#desktop-view {
 		display: block;
+	}
+	
+	
+	.river-conditions .condition {
+		display: block;
+	}
+	
+	.river-conditions .condition.unit-label:after {
+		display: inline-block;
+		margin-left: 5em;
+		width: 0;
+		vertical-align: top;
 	}
 }
 /** end of desktop-only styles **/
