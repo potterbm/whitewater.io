@@ -494,6 +494,8 @@ header .logo-container .logo {
 	}
 	
 	header .search-container input {
+		background-color: transparent;
+		
 		font-size: 30px;
 		line-height: 50px;
 		margin: 12.5px 0;
