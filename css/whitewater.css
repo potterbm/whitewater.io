@@ -478,8 +478,10 @@ header .logo-container .logo {
 	}
 	
 	.river-conditions .condition.unit-label:after {
+		opacity: 0.75;
+		
 		display: inline-block;
-		margin-left: 2em;
+		margin-top: 1em;
 		width: 0;
 		vertical-align: top;
 		
