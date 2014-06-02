@@ -450,7 +450,7 @@ header .search-container input:focus ~ .search-icon {
 
 
 /** mobile-only styles **/
-@media only screen and (max-width : 768px) {
+@media only screen and (max-device-width : 767px) {
 	
 	.pane-container {
 	}
@@ -467,7 +467,7 @@ header .search-container input:focus ~ .search-icon {
 
 
 /** desktop-only styles **/
-@media only screen and (min-width : 768px) {
+@media only screen and (min-device-width : 768px) {
 	
 	
 	#desktop-view {
