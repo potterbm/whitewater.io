@@ -487,6 +487,8 @@ header .logo-container .logo {
 	}
 	
 	header .search-container {
+		background-color: transparent;
+		
 		height: 100px;
 		margin-top: -50px;
 	}
