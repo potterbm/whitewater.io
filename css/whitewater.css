@@ -500,21 +500,28 @@ header .logo-container .logo {
 		width: 25px;
 	}
 	
+	header .search-container input:focus {
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0 0.3);
+		border-radius: 0px;
+		outline: none;
+		
+		width: 375px;
+	}
+	
 	header .search-container .search-icon {
 		height: 62.5px;
 		width: 62.5px;
 		margin-top: -31.125px;
 	}
 	
+	header .search-container input:focus + .search-icon {
+		
+	}
+	
 	
 	.search-results {
 		top: 100px;
-		
-		/*-webkit-transform: translateY(-130%);
-		-moz-transform: translateY(-130%);
-		-ms-transform: translateY(-130%);
-		-o-transform: translateY(-130%);
-		transform: translateY(-130%);*/
 	}
 	
 	
