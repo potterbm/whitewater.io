@@ -113,12 +113,22 @@ River.prototype.search = function(text, callback) {
 	
 	$$("body").append('<iframe id="search-request" style="display: none;" src="' + self.searchURL.replace('$query', text) + '"></iframe>');
 	console.log($$("#search-request").length);
+	
+	$$("#search-request").on('load', function() {
+		console.log('load');
+	});
+	
+	$$("#search-request").get().onload = function() {
+		console.log('get onload');
+	}
+	
 	$$("#search-request").on('ready', function() {
+		console.log('ready');
 		var response = $$("#search-request").html();
 		console.log(response);
 		
 		if(typeof(callback) == "function") {
-			callback.apply(self, self.parseSearchResults);
+			//callback.apply(self, self.parseSearchResults);
 		}
 	});
 	
