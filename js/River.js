@@ -5,7 +5,7 @@ function River()
 	var self = this;
 	
 	// One argument, object
-	if(arguments.length === 1 && typeof(arguments[0]]) == "object") {
+	if(arguments.length === 1 && typeof(arguments[0]) == "object") {
 		
 		if("id" in arguments[0]) {
 			self.id = arguments[0].id;
