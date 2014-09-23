@@ -119,7 +119,7 @@ function RiverApp() {
 		self.displayRiver = new River();
 	}
 	
-	self.displayRiver = new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH", "flow" : 1 });
+	self.displayRiver = new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH", "flow" : 2 });
 }
 
 RiverApp.prototype.searchResults = [new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH" })];
