@@ -119,7 +119,13 @@ function RiverApp() {
 		self.displayRiver = new River();
 	}
 	
-	self.displayRiver = new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH", "flow" : 3 });
+	self.displayRiver = new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH", "flow" : 4 });
+	
+	$$(window).on('message', function(event) {
+		if(event.origin !== "http://potterbm.github.io/whitewater.io/") { return; }
+		
+		self.parseSearchResults(event.data);
+	});
 }
 
 RiverApp.prototype.searchResults = [new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH" })];
@@ -165,12 +171,19 @@ RiverApp.prototype.search = function(searchText) {
 		
 		console.log(arguments);
 		console.log(this);
-		console.log($$(this).html());
+		console.log(this.innerHTML);
+		console.log(window);
+		console.log(window.parent);
 		
+		var results = [];
 		$$("#search-request").find("site").each(function() {
 			console.log('iteration');
 			console.log(arguments);
 			console.log(this);
 		});
 	});
+}
+
+RiverApp.prototype.parseSearchResults = function(data) {
+	console.log(data);
 }
