@@ -18,7 +18,7 @@ River.prototype.longitude = 0;
 River.prototype.data = false;
 
 River.prototype.load = function(callback) {
-	var instance = this;
+	var self = this;
 	
 	var request = $$.ajax({
 		async : true,
@@ -28,24 +28,26 @@ River.prototype.load = function(callback) {
 		success : function(response) {
 			
 			// Check to see if the request returned data and store a status
-			instance.data = true;
+			self.data = true;
 			
 			// Store data
-			instance.name = instance.parseRiverName(response.value.timeSeries[0].sourceInfo.siteName);
-			instance.latitude = response.value.timeSeries[0].sourceInfo.geoLocation.geogLocation.latitude;
-			instance.longitude = response.value.timeSeries[0].sourceInfo.geoLocation.geogLocation.longitude;
-			instance.rate = parseInt(response.value.timeSeries[0].values[0].value[0].value[0].value);
-			instance.depth = parseInt(response.value.timeSeries[1].values[0].value[0].value[0].value);
+			self.name = self.parseRiverName(response.value.timeSeries[0].sourceInfo.siteName);
+			self.latitude = response.value.timeSeries[0].sourceInfo.geoLocation.geogLocation.latitude;
+			self.longitude = response.value.timeSeries[0].sourceInfo.geoLocation.geogLocation.longitude;
+			self.rate = parseInt(response.value.timeSeries[0].values[0].value[0].value[0].value);
+			self.depth = parseInt(response.value.timeSeries[1].values[0].value[0].value[0].value);
 			
 			// Call a callback with this River as the context
 			if(typeof(callback) == "function") {
-				callback.apply(instance, response);
+				callback.apply(self, response);
 			}
 		}
 	});
 	
 	return request;
 }
+
+River.prototype.searchURL = "http://waterdata.usgs.gov/nwis/inventory?search_station_nm=$query&search_station_nm_match_type=anywhere&site_tp_cd=ST&group_key=NONE&format=sitefile_output&sitefile_output_format=xml&column_name=agency_cd&column_name=site_no&column_name=station_nm&list_of_search_criteria=search_station_nm%2Csite_tp_cd";
 
 
 River.prototype.parseRiverName = function(text) {
@@ -103,8 +105,22 @@ River.prototype.displaySearchResult = function() {
 
 
 River.prototype.search = function(text, callback) {
-	var instance = this;
+	var self = this;
 	
+	if($$("iframe").length > 0) {
+		$$("iframe").remove();
+	}
+	
+	$$("body").append('<iframe style="display: none;" src="' + self.searchURL.replace('$query', text) + '"></iframe>');
+	$$("iframe").on('load', function() {
+		var response = $$("iframe").html();
+		
+		if(typeof(callback) == "function") {
+			callback.apply(self, self.parseSearchResults);
+		}
+	});
+	
+	/*
 	var request = $$.ajax({
 		async : true,
 		crossDomain : true,
@@ -114,10 +130,11 @@ River.prototype.search = function(text, callback) {
 			
 			// Call a callback with this River as the context
 			if(typeof(callback) == "function") {
-				callback.apply(instance, instance.parseSearchResults);
+				callback.apply(self, self.parseSearchResults);
 			}
 		}
 	});
+	*/
 }
 
 

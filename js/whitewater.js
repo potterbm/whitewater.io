@@ -47,6 +47,7 @@ $$(document).ready(function(e) {
 	
 	
 	$$("#search-input").on('keyup', function(e) {
+		console.log(e.which);
 		
 		if(e.which != 13) {
 			return;
