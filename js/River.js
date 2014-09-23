@@ -162,7 +162,9 @@ RiverApp.prototype.search = function(searchText) {
 	$$("body").append('<iframe id="search-request" style="display: none;" src="' + self.searchURL.replace('$query', searchText) + '"></iframe>');
 	
 	$$("#search-request").on('load', function() {
-		console.log($$("#search-request").html());
+		
+		console.log(arguments);
+		console.log(this);
 		
 		$$("#search-request").find("site").each(function() {
 			console.log('iteration');
