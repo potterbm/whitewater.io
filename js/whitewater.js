@@ -1,6 +1,8 @@
 
 
+var ra = new RiverApp();
 
+var r = new River();
 
 var whitewaterIOApp = angular.module('whitewaterIOApp', []);
 
