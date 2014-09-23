@@ -46,11 +46,15 @@ $$(document).ready(function(e) {
 	}, 2000);
 	
 	
-	$$("#search-input").keyup(function(e) {
+	$$("#search-input").on('keyup', function(e) {
+		
+		if(e.which != 13) {
+			return;
+		}
 		
 		var input = $$(this).val().trim();
 		
-		
+		river.search(input);
 		
 		
 	});
