@@ -119,7 +119,7 @@ function RiverApp() {
 	}
 }
 
-RiverApp.prototype.searchResults = [];
+RiverApp.prototype.searchResults = [new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH" })];
 RiverApp.prototype.searchResults = "";
 RiverApp.prototype.displayRiver = false;
 
