@@ -61,7 +61,7 @@ River.prototype.raw = false;
 River.prototype.load = function(callback) {
 	var self = this;
 	
-	var request = $$.ajax({
+	var request = $.ajax({
 		async : true,
 		crossDomain : true,
 		dataType : "json",
@@ -119,7 +119,7 @@ function RiverApp() {
 		self.displayRiver = new River();
 	}
 	
-	self.displayRiver = new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH", "flow" : 4 });
+	self.displayRiver = new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH", "flow" : 5 });
 	
 	$$(window).on('message', function(event) {
 		if(event.origin !== "http://potterbm.github.io/whitewater.io/") { return; }
@@ -161,27 +161,37 @@ RiverApp.prototype.save = function() {
 RiverApp.prototype.search = function(searchText) {
 	var self = this;
 	
-	if($$("#search-request").length > 0) {
-		$$("#search-request").remove();
-	}
-	
-	$$("body").append('<iframe id="search-request" style="display: none;" src="' + self.searchURL.replace('$query', searchText) + '"></iframe>');
-	
-	$$("#search-request").on('load', function() {
-		
-		console.log(arguments);
-		console.log(this);
-		console.log(this.innerHTML);
-		console.log(window);
-		console.log(window.parent);
-		
-		var results = [];
-		$$("#search-request").find("site").each(function() {
-			console.log('iteration');
-			console.log(arguments);
-			console.log(this);
-		});
+	var request = $.ajax({
+		async : true,
+		crossDomain : true,
+		dataType : "xml",
+		url : self.searchURL.replace('$query', searchText),
+		success : function(response) {
+			console.log(response);
+		}
 	});
+	
+	// if($$("#search-request").length > 0) {
+	// 	$$("#search-request").remove();
+	// }
+	
+	// $$("body").append('<iframe id="search-request" style="display: none;" src="' + self.searchURL.replace('$query', searchText) + '"></iframe>');
+	
+	// $$("#search-request").on('load', function() {
+		
+	// 	console.log(arguments);
+	// 	console.log(this);
+	// 	console.log(this.innerHTML);
+	// 	console.log(window);
+	// 	console.log(window.parent);
+		
+	// 	var results = [];
+	// 	$$("#search-request").find("site").each(function() {
+	// 		console.log('iteration');
+	// 		console.log(arguments);
+	// 		console.log(this);
+	// 	});
+	// });
 }
 
 RiverApp.prototype.parseSearchResults = function(data) {
