@@ -112,7 +112,7 @@ function RiverApp() {
 		self.storage = false;
 	}
 	
-	self.load();
+	//self.load();
 	
 	if(self.displayRiver === false) {
 		self.displayRiver = new River();
