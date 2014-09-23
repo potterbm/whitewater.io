@@ -31,6 +31,8 @@ function isDesktop()
 
 $$(document).ready(function(e) {
 	
+	var river = new River();
+	
 	if(isDesktop()) {
 		
 	}
@@ -44,6 +46,14 @@ $$(document).ready(function(e) {
 	}, 2000);
 	
 	
+	$$("#search-input").keyup(function(e) {
+		
+		var input = $$(this).val().trim();
+		
+		
+		
+		
+	});
 	
 	
 });
