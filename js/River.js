@@ -111,9 +111,11 @@ River.prototype.search = function(text, callback) {
 		$$("iframe").remove();
 	}
 	
-	$$("body").append('<iframe style="display: none;" src="' + self.searchURL.replace('$query', text) + '"></iframe>');
-	$$("iframe").on('load', function() {
-		var response = $$("iframe").html();
+	$$("body").append('<iframe id="search-request" style="display: none;" src="' + self.searchURL.replace('$query', text) + '"></iframe>');
+	console.log($$("#search-request").length);
+	$$("#search-request").on('ready', function() {
+		var response = $$("#search-request").html();
+		console.log(response);
 		
 		if(typeof(callback) == "function") {
 			callback.apply(self, self.parseSearchResults);
