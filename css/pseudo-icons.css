@@ -24,6 +24,8 @@
 .ps:before,
 .ps:after
 {
+	border: none;
+	
 	font-size: 1em;
 	
 	box-sizing: border-box;
