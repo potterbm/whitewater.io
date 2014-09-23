@@ -42,8 +42,9 @@ function River()
 	}
 	
 	// Any other single argument is treated as a site id
-	else if(arguments.length === 1) {
-		self.load(arguments[0]);
+	else if(arguments.length === 1 && parseInt(arguments[0]) > 0) {
+		self.id = arguments[0];
+		self.load();
 	}
 	
 }
