@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="riverApp">
 
 <head>
 
@@ -15,6 +15,7 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/whitewater.io/media/touch-icon-ipad-retina.png">
 	
 	<link rel="stylesheet" type="text/css" href="/whitewater.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/whitewater.io/css/pseudo-icons.css" />
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,800,800italic,900,900italic|Roboto+Condensed:400,700" />
 	<link rel="stylesheet" type="text/css" href="/whitewater.io/css/whitewater.css" />
 
@@ -22,7 +23,7 @@
    
 </head>
 
-<body class="loading-view" data-current-pane="conditions">
+<body class="loading-view" data-current-pane="conditions" data-ng-controller="RiverApp as app">
 
 <header class="loading">
 	<div class="logo-container">
@@ -31,30 +32,32 @@
 		</svg>
 	</div><!--
 	
- --><div class="search-container hidden">
- 		<input id="search-input" type="text" placeholder="Find a river" />
- 		<svg viewBox="0 0 100 100" class="search-icon">
-			<circle cx="40" cy="40" r="17.5" class="circle" />
-			<line x1="80" y1="80" x2="57.5" y2="57.5" class="line" />
-		</svg>
+ --><form class="search-container hidden" data-ng-submit="app.search(app.searchText)">
+ 		<input id="search-input" type="text" placeholder="Find a river" data-ng-model="app.searchText" />
+ 		<button type="submit" class="ps ps-search"></button>
 		
 		<div id="search-results" class="search-results">
-			
+			<div class="result" data-ng-repeat="result in app.searchResults">
+				<h2>{{ result.name }}</h2>
+				<h3>{{ result.location }}</h3>
+			</div>
 		</div>
-	</div>
+	</form>
 </header>
 
 <div class="container">
 	
 	<div class="river-conditions">
-		<div id="river-title"><div class="river-title">Colorado River<span class="river-location">below Portsmouth, ME</span></div></div>
-		<div id="river-flow" class="condition flow unit-label unit-cfs" data-title="Flow Rate">43</div>
-		<div id="river-depth" class="condition depth unit-label unit-ft" data-title="Depth">12</div>
+		<h2 class="river-name">{{ app.displayRiver.name }}</h2>
+		<h3 class="river-location">{{ app.displayRiver.location }}</h3>
+		<div id="river-flow" class="condition flow unit-label unit-cfs" data-title="Flow Rate">{{ app.displayRiver.flow }}</div>
+		<div id="river-depth" class="condition depth unit-label unit-ft" data-title="Depth">{{ app.displayRiver.depth }}</div>
 	</div>
 
 </div>
 
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 <script src="/whitewater.io/js/quo.js"></script>
 <script src="/whitewater.io/js/whitewater.js"></script>
 <script src="/whitewater.io/js/River.js"></script>

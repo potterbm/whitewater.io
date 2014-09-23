@@ -1,21 +1,61 @@
 
 
-function River(siteID)
+function River()
 {
-	this.siteID = siteID;
+	var self = this;
+	
+	// One argument, object
+	if(arguments.length === 1 && typeof(arguments[0]]) == "object") {
+		
+		if("id" in arguments[0]) {
+			self.id = arguments[0].id;
+		}
+		
+		if("name" in arguments[0]) {
+			self.name = arguments[0].name;
+		}
+		
+		if("location" in arguments[0]) {
+			self.location = arguments[0].location;
+		}
+		
+		if("flow" in arguments[0]) {
+			self.flow = parseInt(arguments[0].flow);
+		}
+		
+		if("depth" in arguments[0]) {
+			self.depth = parseInt(arguments[0].depth);
+		}
+		
+		if("latitude" in arguments[0]) {
+			self.latitude = arguments[0].latitude;
+		}
+		
+		if("longitude" in arguments[0]) {
+			self.longitude = arguments[0].longitude;
+		}
+		
+		if("raw" in arguments[0]) {
+			self.raw = arguments[0].raw;
+		}
+		
+	}
+	
+	// Any other single argument is treated as a site id
+	else if(arguments.length === 1) {
+		self.load(arguments[0]);
+	}
+	
 }
 
-River.prototype.siteID = -1;
-River.prototype.name = {
-	"name" : "",
-	"location" : "",
-	"raw" : ""
-};
-River.prototype.rate = 0;
+River.prototype.id = -1;
+River.prototype.name = "";
+River.prototype.location = "";
+River.prototype.flow = 0;
 River.prototype.depth = 0;
 River.prototype.latitude = 0;
 River.prototype.longitude = 0;
-River.prototype.data = false;
+River.prototype.raw = false;
 
 River.prototype.load = function(callback) {
 	var self = this;
@@ -24,11 +64,9 @@ River.prototype.load = function(callback) {
 		async : true,
 		crossDomain : true,
 		dataType : "json",
-		url : "http://waterservices.usgs.gov/nwis/iv/?format=json&parameterCd=00060,00065,00010&siteType=ES,ST&site=" + this.site,
+		url : "http://waterservices.usgs.gov/nwis/iv/?format=json&parameterCd=00060,00065,00010&siteType=ES,ST&site=" + self.id,
 		success : function(response) {
-			
-			// Check to see if the request returned data and store a status
-			self.data = true;
+			self.raw = response;
 			
 			// Store data
 			self.name = self.parseRiverName(response.value.timeSeries[0].sourceInfo.siteName);
@@ -47,68 +85,75 @@ River.prototype.load = function(callback) {
 	return request;
 }
 
-River.prototype.searchURL = "http://waterdata.usgs.gov/nwis/inventory?search_station_nm=$query&search_station_nm_match_type=anywhere&site_tp_cd=ST&group_key=NONE&format=sitefile_output&sitefile_output_format=xml&column_name=agency_cd&column_name=site_no&column_name=station_nm&list_of_search_criteria=search_station_nm%2Csite_tp_cd";
-
-
-River.prototype.parseRiverName = function(text) {
-	var parts = text.split(new RegExp('(?:above|at|below|near)', 'i'), 1);
-	var separator = text.match(new RegExp('(above|at|below|near)', 'i'))[0];
-	
-	return {
-		"name" : parts[0].trim(),
-		"location" : separator + " " + parts[1].trim(),
-		"raw" : text
-	};
-}
-
-River.prototype.getName = function() {
-	return this.name.name;
-}
-
-River.prototype.getFullName = function() {
-	return this.name.name + " " + this.name.location;
-}
-
-River.prototype.getRawName = function() {
-	return this.name.raw;
-}
-
-River.prototype.getNameMarkup = function() {
-	return '<div class="river-title">' + this.name.name + '<span class="river-location">' + this.name.location + '</span></div>';
-}
-
-River.prototype.getRate = function() {
-	return this.rate;
-}
-
-River.prototype.getFlow = River.prototype.getRate;
-
-River.prototype.getDepth = function() {
-	return this.depth;
-}
-
-River.prototype.getSearchResultMarkup = function() {
-	return '<div class=""></div>';
+River.prototype.toJSON = function() {
+	return JSON.stringify({
+		"id" : self.id,
+		"name" : self.name,
+		"location" : self.location,
+		"flow" : self.flow,
+		"depth" : self.depth,
+		"raw" : self.raw
+	});
 }
 
 
-River.prototype.display = function() {
-	$$("#river-title").html(this.getNameMarkup());
-	$$("#river-depth").html(this.getDepth());
-	$$("#river-flow").html(this.getRate());
-}
 
 
-River.prototype.displaySearchResult = function() {
-	$$("#search-results").append(this.getSearchResultMarkup());
-}
 
 
-River.prototype.search = function(text, callback) {
+
+
+function RiverApp() {
 	var self = this;
 	
-	if($$("iframe").length > 0) {
-		$$("iframe").remove();
+	try {
+		self.storage = window.localStorage;
+	} catch(e) {
+		self.storage = false;
+	}
+	
+	self.load();
+	
+	if(self.displayRiver === false) {
+		self.displayRiver = new River();
+	}
+}
+
+RiverApp.prototype.searchResults = [];
+RiverApp.prototype.searchResults = "";
+RiverApp.prototype.displayRiver = false;
+
+RiverApp.prototype.searchURL = "http://waterdata.usgs.gov/nwis/inventory?search_station_nm=$query&search_station_nm_match_type=anywhere&site_tp_cd=ST&group_key=NONE&format=sitefile_output&sitefile_output_format=xml&column_name=agency_cd&column_name=site_no&column_name=station_nm&list_of_search_criteria=search_station_nm%2Csite_tp_cd";
+
+RiverApp.prototype.load = function() {
+	var self = this;
+	
+	if(self.storage === false) {
+		return;
+	}
+	
+	var data = self.storage.getItem("whitewater.io-displayRiver");
+	
+	if(data && typeof(data) != "undefined") {
+		self.displayRiver = new River(JSON.parse(data));
+	}
+}
+
+RiverApp.prototype.save = function() {
+	var self = this;
+	
+	if(self.storage === false) {
+		return;
+	}
+	
+	self.storage.setItem("whitewater.io-displayRiver", self.displayRiver.toJSON());
+}
+
+RiverApp.prototype.search = function(searchText) {
+	var self = this;
+	
+	if($$("#search-request").length > 0) {
+		$$("#search-request").remove();
 	}
 	
 	$$("body").append('<iframe id="search-request" style="display: none;" src="' + self.searchURL.replace('$query', text) + '"></iframe>');
@@ -116,44 +161,10 @@ River.prototype.search = function(text, callback) {
 	$$("#search-request").on('load', function() {
 		console.log($$("#search-request").html());
 		
-		var results = [];
-		$$("#search-request").find("site").each(function(element) {
+		$$("#search-request").find("site").each(function() {
 			console.log('iteration');
-			console.log(element);
+			console.log(arguments);
 			console.log(this);
-			
-			results.push(element);
 		});
-		
-		self.parseSearchResults();
 	});
-	
-	/*
-	var request = $$.ajax({
-		async : true,
-		crossDomain : true,
-		dataType : "xml",
-		url : "http://waterdata.usgs.gov/nwis/inventory?search_station_nm=" + text + "&search_station_nm_match_type=anywhere&site_tp_cd=ST&group_key=NONE&format=sitefile_output&sitefile_output_format=xml&column_name=agency_cd&column_name=site_no&column_name=station_nm&list_of_search_criteria=search_station_nm%2Csite_tp_cd",
-		success : function(response) {
-			
-			// Call a callback with this River as the context
-			if(typeof(callback) == "function") {
-				callback.apply(self, self.parseSearchResults);
-			}
-		}
-	});
-	*/
 }
-
-
-River.prototype.parseSearchResults = function(response)
-{
-	console.log(response);
-	
-	return [];
-}
-
-
-
-
-

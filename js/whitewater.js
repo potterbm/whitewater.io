@@ -2,33 +2,14 @@
 
 
 
+var whitewaterIOApp = angular.module('whitewaterIOApp', []);
 
-
-
-function initMobile()
-{
-	
-}
-
-function initDesktop()
-{
-	
-}
-
-function isMobile()
-{
-	return !isDesktop();
-}
-
-function isDesktop()
-{
-	return $$("html").width >= 980;
-}
+whitewaterIOApp.controller('RiverApp', RiverApp);
 
 
 
 
-
+/*
 $$(document).ready(function(e) {
 	
 	var river = new River();
@@ -62,7 +43,6 @@ $$(document).ready(function(e) {
 	
 	
 });
-
-
+*/
 
 

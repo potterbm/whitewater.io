@@ -251,7 +251,7 @@ header .search-container input:focus ~ .search-icon {
 	text-align: center;
 }
 
-.river-conditions .river-title {
+.river-conditions .river-name {
 	color: rgba(0, 0, 0, 0.8);
 	
 	font-size: 5em;
