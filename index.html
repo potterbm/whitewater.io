@@ -23,7 +23,7 @@
    
 </head>
 
-<body class="conditions-view" data-current-pane="conditions" data-ng-controller="RiverApp as whitewater.io">
+<body class="conditions-view" data-current-pane="conditions" data-ng-controller="RiverApp as app">
 
 <header class="">
 	<div class="logo-container">
@@ -32,12 +32,12 @@
 		</svg>
 	</div><!--
 	
- --><form class="search-container" data-ng-submit="whitewater.io.search(whitewater.io.searchText)">
- 		<input id="search-input" type="text" placeholder="Find a river" data-ng-model="whitewater.io.searchText" />
+ --><form class="search-container" data-ng-submit="app.search(app.searchText)">
+ 		<input id="search-input" type="text" placeholder="Find a river" data-ng-model="app.searchText" />
  		<button type="submit" class="search-icon ps ps-search"></button>
 		
 		<div id="search-results" class="search-results">
-			<div class="result" data-ng-repeat="result in whitewater.io.searchResults">
+			<div class="result" data-ng-repeat="result in app.searchResults">
 				<h2>{{ result.name }}</h2>
 				<h3>{{ result.location }}</h3>
 			</div>
@@ -48,10 +48,10 @@
 <div class="container">
 	
 	<div class="river-conditions">
-		<h2 class="river-name">{{ whitewater.io.displayRiver.name }}</h2>
-		<h3 class="river-location">{{ whitewater.io.displayRiver.location }}</h3>
-		<div id="river-flow" class="condition flow unit-label unit-cfs" data-title="Flow Rate">{{ whitewater.io.displayRiver.flow }}</div>
-		<div id="river-depth" class="condition depth unit-label unit-ft" data-title="Depth">{{ whitewater.io.displayRiver.depth }}</div>
+		<h2 class="river-name">{{ app.displayRiver.name }}</h2>
+		<h3 class="river-location">{{ app.displayRiver.location }}</h3>
+		<div id="river-flow" class="condition flow unit-label unit-cfs" data-title="Flow Rate">{{ app.displayRiver.flow }}</div>
+		<div id="river-depth" class="condition depth unit-label unit-ft" data-title="Depth">{{ app.displayRiver.depth }}</div>
 	</div>
 
 </div>
