@@ -119,6 +119,7 @@ function RiverApp() {
 		self.displayRiver = new River();
 	}
 	
+	self.searchResults = [new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH", "flow" : 8 })];
 	self.displayRiver = new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH", "flow" : 5 });
 	
 	$$(window).on('message', function(event) {
@@ -128,8 +129,7 @@ function RiverApp() {
 	});
 }
 
-RiverApp.prototype.searchResults = [new River({ "name" : "Colorado River", "location" : "near Portsmouth, NH" })];
-RiverApp.prototype.searchResults = "";
+RiverApp.prototype.searchResults = [];
 RiverApp.prototype.displayRiver = false;
 
 RiverApp.prototype.searchURL = "http://waterdata.usgs.gov/nwis/inventory?search_station_nm=$query&search_station_nm_match_type=anywhere&site_tp_cd=ST&group_key=NONE&format=sitefile_output&sitefile_output_format=xml&column_name=agency_cd&column_name=site_no&column_name=station_nm&list_of_search_criteria=search_station_nm%2Csite_tp_cd";
